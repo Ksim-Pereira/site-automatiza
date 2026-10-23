@@ -3,10 +3,10 @@ comments: true
 hide:
   - navigation
 tags:
-  - PRODEMGE
+  - Python
 ---
 
-# Login no Terminal PRODEMGE
+# Robo baixar da biblioteca digital
 
 
 # teste
