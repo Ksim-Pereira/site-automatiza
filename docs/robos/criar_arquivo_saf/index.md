@@ -53,10 +53,8 @@
     position: sticky;
     top: 1rem;
   }
-  .solution-author { background: var(--solution-soft); border-radius: 8px; padding: 1rem; }
   .solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
-  .solution-author strong { display: block; font-size: .9rem; margin-bottom: .35rem; }
-  .solution-author a { color: #111111; font-size: .84rem; overflow-wrap: anywhere; }
+  .solution-contact { color: var(--solution-ink); overflow-wrap: anywhere; }
   .solution-info { border: 1px solid var(--solution-line); border-radius: 7px; padding: .9rem 1rem; }
   .solution-info p { font-size: .8rem; }
   .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
@@ -122,6 +120,13 @@
           <p>Criar arquivo SAF a partir de documento em PDF e seus metadados em planilha Excel.</p>
         </section>
 
+        <section class="solution-section" aria-labelledby="responsavel">
+          <h2 id="responsavel">Responsável</h2>
+          <p>Autor Sobrenome e UltimoNome</p>
+          <p><a class="solution-contact" data-contact-email>Carregando e-mail...</a></p>
+          <p data-contact-organization hidden></p>
+        </section>
+
         <div class="solution-meta-grid">
           <section class="solution-section" aria-labelledby="pre-requisitos">
             <h2 id="pre-requisitos">Pré-requisitos</h2>
@@ -155,12 +160,6 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
       </main>
 
       <aside class="solution-sidebar" aria-label="Informações da solução">
-        <section class="solution-author">
-          <p class="solution-label">Responsável</p>
-          <strong>Autor Sobrenome e UltimoNome</strong>
-          <a data-contact-email>Carregando e-mail...</a>
-          <p data-contact-organization hidden></p>
-        </section>
         <section class="solution-info">
           <p class="solution-label">Repositório e anexos</p>
           <div class="solution-actions">
@@ -173,6 +172,7 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
           <p class="solution-label">Nesta página</p>
           <ol>
             <li><a href="#descricao">Descrição da solução</a></li>
+            <li><a href="#responsavel">Responsável</a></li>
             <li><a href="#pre-requisitos">Pré-requisitos</a></li>
             <li><a href="#sistemas">Sistemas que interagem</a></li>
             <li><a href="#ferramentas">Ferramentas</a></li>
