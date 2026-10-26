@@ -88,7 +88,8 @@
   }
 </style>
 
-<article class="solution-page" data-verified="false">
+<!-- Para trocar a pessoa responsável, altere somente data-contact-name. -->
+<article class="solution-page" data-verified="false" data-contact-name="Autor Sobrenome e UltimoNome">
   <div class="solution-card">
     <header class="solution-top">
       <div>
@@ -133,8 +134,9 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
       <aside class="solution-sidebar" aria-label="Informações da solução">
         <section class="solution-author">
           <p class="solution-label">Responsável</p>
-          <strong>Autor</strong>
-          <a href="mailto:autor@email.com">autor@email.com</a>
+          <strong>Autor Sobrenome e UltimoNome</strong>
+          <a data-contact-email>Carregando e-mail...</a>
+          <p data-contact-organization hidden></p>
         </section>
         <section class="solution-info">
           <p class="solution-label">Repositório e anexos</p>
