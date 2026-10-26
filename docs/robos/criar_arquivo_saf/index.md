@@ -31,7 +31,12 @@
   .solution-page h1 { font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.15; margin: 0 0 .55rem; }
   .solution-date { color: var(--solution-muted) !important; font-size: .84rem; }
 
-  .solution-layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) 230px; margin-top: 2rem; }
+  .solution-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) clamp(280px, 22vw, 340px);
+    margin-top: 2rem;
+  }
   .solution-section { margin-bottom: 1.7rem; }
   .solution-section h2 { border-left: 4px solid #111111; font-size: 1rem; margin: 0 0 .7rem; padding-left: .55rem; }
   .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
