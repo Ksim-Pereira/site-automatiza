@@ -1,4 +1,5 @@
 <!-- Para exibir o aviso de segurança, altere data-verified="false" para data-verified="true" no elemento article abaixo. -->
+
 <style>
   .solution-page {
     --solution-ink: #111111;
@@ -54,7 +55,14 @@
   .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
   .solution-actions { display: grid; gap: .55rem; }
   .solution-action { border: 1px solid currentColor; border-radius: 5px; display: block; font-size: .8rem; font-weight: 700; padding: .6rem .7rem; text-decoration: none; }
-  .solution-action--unavailable { color: #a61b1b; cursor: not-allowed; opacity: .85; pointer-events: none; }
+  .solution-page .solution-action--unavailable {
+    background: #fff5f5;
+    border-color: #b42318 !important;
+    color: #b42318 !important;
+    cursor: not-allowed;
+    opacity: .9;
+    pointer-events: none;
+  }
 
   /* Layout amplo somente para esta solução, em telas de computador. */
   @media (min-width: 721px) {
