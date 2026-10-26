@@ -111,6 +111,11 @@
           <p>Criar arquivo SAF a partir de documento em PDF e seus metadados em planilha Excel.</p>
         </section>
 
+        <section class="solution-section" aria-labelledby="pre-requisitos">
+          <h2 id="pre-requisitos">Pré-requisitos</h2>
+          <div class="solution-tags"><span class="solution-tag">Biblioteca Pandas</span><span class="solution-tag">Biblioteca OpenPyXL</span></div>
+        </section>
+
         <section class="solution-section" aria-labelledby="sistemas">
           <h2 id="sistemas">Sistemas que interagem</h2>
           <div class="solution-tags"><span class="solution-tag">Local</span></div>
@@ -121,11 +126,6 @@
           <div class="solution-tags"><span class="solution-tag">Python</span><span class="solution-tag">Excel</span></div>
         </section>
 
-        <section class="solution-section" aria-labelledby="palavras-chave">
-          <h2 id="palavras-chave">Palavras-chave</h2>
-          <div class="solution-tags"><span class="solution-tag">Gestão da Informação</span><span class="solution-tag">Biblioteca</span></div>
-        </section>
-
         <section class="solution-section" aria-labelledby="uso">
           <h2 id="uso">Como usar a solução</h2>
           <p class="solution-use">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum pretium nibh, ac cursus ex tristique a. Curabitur sed arcu lectus. Mauris non feugiat elit, ac egestas odio. Sed nec erat sodales, gravida sem sed, accumsan arcu.
@@ -133,6 +133,11 @@
 Phasellus iaculis congue sem eu congue. In varius felis ut tristique convallis. Proin hendrerit, leo in dictum convallis, sapien lorem feugiat odio, finibus efficitur dolor metus ut elit. Duis et rhoncus lorem. Maecenas sed laoreet tortor, ac rutrum lorem.
 
 Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamus accumsan non augue eget ultrices. Suspendisse eu euismod leo, ac luctus ex. Ut rhoncus magna sed volutpat interdum. Mauris quis tempus lorem.</p>
+        </section>
+
+        <section class="solution-section" aria-labelledby="palavras-chave">
+          <h2 id="palavras-chave">Palavras-chave</h2>
+          <div class="solution-tags"><span class="solution-tag">Gestão da Informação</span><span class="solution-tag">Biblioteca</span></div>
         </section>
       </main>
 
