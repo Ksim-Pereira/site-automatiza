@@ -8,7 +8,7 @@
     --solution-soft: #f3f3f3;
     color: var(--solution-ink);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 1.5rem auto;
+    margin: .5rem auto 1.5rem;
     max-width: none;
   }
 
@@ -21,7 +21,7 @@
     border: 0px solid var(--solution-line);
     border-top: 0px solid #111111;
     border-radius: 0px;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
   }
 
   .solution-top { display: flex; gap: 1.5rem; justify-content: space-between; }
@@ -51,7 +51,8 @@
     display: grid;
     gap: .7rem;
     position: sticky;
-    top: 1rem;
+    /* Mantém o índice abaixo do cabeçalho fixo durante a rolagem. */
+    top: calc(var(--md-header-height, 2.4rem) + 1rem);
   }
   .solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
   .solution-contact { color: var(--solution-ink); overflow-wrap: anywhere; }
