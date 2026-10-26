@@ -1,3 +1,4 @@
+<!-- Para exibir o aviso de segurança, altere data-verified="false" para data-verified="true" no elemento article abaixo. -->
 <style>
   .solution-page {
     --solution-ink: #111111;
@@ -23,23 +24,11 @@
   }
 
   .solution-top { display: flex; gap: 1.5rem; justify-content: space-between; }
-  .solution-status { color: #111111; font-size: .78rem; font-weight: 700; margin: 0 0 .9rem; }
+  .solution-status { color: #111111; display: none; font-size: .78rem; font-weight: 700; margin: 0 0 .9rem; }
+  .solution-page[data-verified="true"] .solution-status { display: block; }
   .solution-status::before { content: "✓ "; }
   .solution-page h1 { font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.15; margin: 0 0 .55rem; }
   .solution-date { color: var(--solution-muted) !important; font-size: .84rem; }
-  .solution-save {
-    align-self: flex-start;
-    background: #ffffff;
-    border: 1px solid var(--solution-ink);
-    border-radius: 6px;
-    color: var(--solution-ink);
-    cursor: pointer;
-    font: inherit;
-    font-size: .88rem;
-    font-weight: 700;
-    padding: 1rem 1.15rem;
-  }
-  .solution-save:hover, .solution-save:focus { background: #111111; color: #ffffff; }
 
   .solution-layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) 230px; margin-top: 2rem; }
   .solution-section { margin-bottom: 1.7rem; }
@@ -63,6 +52,9 @@
   .solution-info { border: 1px solid var(--solution-line); border-radius: 7px; padding: .9rem 1rem; }
   .solution-info p { font-size: .8rem; }
   .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
+  .solution-actions { display: grid; gap: .55rem; }
+  .solution-action { border: 1px solid currentColor; border-radius: 5px; display: block; font-size: .8rem; font-weight: 700; padding: .6rem .7rem; text-decoration: none; }
+  .solution-action--unavailable { color: #a61b1b; cursor: not-allowed; opacity: .85; pointer-events: none; }
 
   /* Layout amplo somente para esta solução, em telas de computador. */
   @media (min-width: 721px) {
@@ -85,19 +77,17 @@
     .solution-top { align-items: flex-start; flex-direction: column; }
     .solution-layout { grid-template-columns: 1fr; }
     .solution-sidebar { position: static; }
-    .solution-save { align-self: auto; width: 100%; }
   }
 </style>
 
-<article class="solution-page">
+<article class="solution-page" data-verified="false">
   <div class="solution-card">
     <header class="solution-top">
       <div>
-        <p class="solution-status">Solução cadastrada</p>
+        <p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p>
         <h1>Criar arquivo SAF</h1>
         <p class="solution-date">Publicada em 26/10/2026 · Atualizada em 26/10/2026</p>
       </div>
-      <button class="solution-save" type="button" aria-label="Salvar solução">☆ Salvar</button>
     </header>
 
     <div class="solution-layout">
@@ -140,7 +130,10 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
         </section>
         <section class="solution-info">
           <p class="solution-label">Repositório e anexos</p>
-          <p>Não foram informados para esta solução.</p>
+          <div class="solution-actions">
+            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Repositório GitHub ↗</a>
+            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Baixar anexo ↓</a>
+          </div>
         </section>
       </aside>
     </div>
