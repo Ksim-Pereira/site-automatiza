@@ -160,14 +160,6 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
       </main>
 
       <aside class="solution-sidebar" aria-label="Informações da solução">
-        <section class="solution-info">
-          <p class="solution-label">Repositório e anexos</p>
-          <div class="solution-actions">
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Repositório GitHub ↗</a>
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Outros links ↗</a>
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Baixar anexo ↓</a>
-          </div>
-        </section>
         <nav class="solution-index" aria-label="Índice da página">
           <p class="solution-label">Nesta página</p>
           <ol>
@@ -180,6 +172,14 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
             <li><a href="#palavras-chave">Palavras-chave</a></li>
           </ol>
         </nav>
+        <section class="solution-info">
+          <p class="solution-label">Repositório e anexos</p>
+          <div class="solution-actions">
+            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Repositório GitHub ↗</a>
+            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Outros links ↗</a>
+            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Baixar anexo ↓</a>
+          </div>
+        </section>
       </aside>
     </div>
   </div>
