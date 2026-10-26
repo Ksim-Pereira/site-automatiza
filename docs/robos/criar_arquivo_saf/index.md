@@ -154,10 +154,8 @@ Phasellus iaculis congue sem eu congue. In varius felis ut tristique convallis. 
 Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamus accumsan non augue eget ultrices. Suspendisse eu euismod leo, ac luctus ex. Ut rhoncus magna sed volutpat interdum. Mauris quis tempus lorem.</p>
         </section>
 
-        <section class="solution-section" aria-labelledby="palavras-chave">
-          <h2 id="palavras-chave">Palavras-chave</h2>
-          <div class="solution-tags"><span class="solution-tag">Gestão da Informação</span><span class="solution-tag">Biblioteca</span></div>
-        </section>
+        <!-- Termos ocultos para indexação pela busca do site. -->
+        <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: Gestão da Informação, Biblioteca</div>
       </main>
 
       <aside class="solution-sidebar" aria-label="Informações da solução">
@@ -170,7 +168,6 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
             <li><a href="#sistemas">Sistemas que interagem</a></li>
             <li><a href="#ferramentas">Ferramentas</a></li>
             <li><a href="#uso">Como usar a solução</a></li>
-            <li><a href="#palavras-chave">Palavras-chave</a></li>
           </ol>
         </nav>
         <section class="solution-info">
