@@ -39,6 +39,8 @@
   }
   .solution-section { margin-bottom: 1.7rem; }
   .solution-section h2 { border-left: 4px solid #111111; font-size: 1rem; margin: 0 0 .7rem; padding-left: .55rem; }
+  .solution-meta-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 1.7rem; }
+  .solution-meta-grid .solution-section { margin-bottom: 0; }
   .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
   .solution-tag { background: var(--solution-soft); border: 1px solid #dedede; border-radius: 4px; color: #111111; font-size: .77rem; padding: .25rem .5rem; }
   .solution-use { white-space: pre-line; }
@@ -60,6 +62,10 @@
   .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
   .solution-actions { display: grid; gap: .55rem; }
   .solution-action { border: 1px solid currentColor; border-radius: 5px; display: block; font-size: .8rem; font-weight: 700; padding: .6rem .7rem; text-decoration: none; }
+  .solution-index { border: 1px solid var(--solution-line); border-radius: 7px; padding: .9rem 1rem; }
+  .solution-index ol { margin: 0; padding-left: 1.2rem; }
+  .solution-index li + li { margin-top: .4rem; }
+  .solution-index a { color: var(--solution-ink); font-size: .84rem; text-decoration-thickness: 1px; text-underline-offset: .15em; }
   .solution-page .solution-action--unavailable {
     background: #fff5f5;
     border-color: #b42318 !important;
@@ -89,7 +95,12 @@
     .solution-card { padding: 1.25rem; }
     .solution-top { align-items: flex-start; flex-direction: column; }
     .solution-layout { grid-template-columns: 1fr; }
+    .solution-meta-grid { grid-template-columns: 1fr; }
     .solution-sidebar { position: static; }
+  }
+
+  @media (min-width: 721px) and (max-width: 1000px) {
+    .solution-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 </style>
 
@@ -111,20 +122,22 @@
           <p>Criar arquivo SAF a partir de documento em PDF e seus metadados em planilha Excel.</p>
         </section>
 
-        <section class="solution-section" aria-labelledby="pre-requisitos">
-          <h2 id="pre-requisitos">Pré-requisitos</h2>
-          <div class="solution-tags"><span class="solution-tag">Biblioteca Pandas</span><span class="solution-tag">Biblioteca OpenPyXL</span></div>
-        </section>
+        <div class="solution-meta-grid">
+          <section class="solution-section" aria-labelledby="pre-requisitos">
+            <h2 id="pre-requisitos">Pré-requisitos</h2>
+            <div class="solution-tags"><span class="solution-tag">Biblioteca Pandas</span><span class="solution-tag">Biblioteca OpenPyXL</span></div>
+          </section>
 
-        <section class="solution-section" aria-labelledby="sistemas">
-          <h2 id="sistemas">Sistemas que interagem</h2>
-          <div class="solution-tags"><span class="solution-tag">Local</span></div>
-        </section>
+          <section class="solution-section" aria-labelledby="sistemas">
+            <h2 id="sistemas">Sistemas que interagem</h2>
+            <div class="solution-tags"><span class="solution-tag">Local</span></div>
+          </section>
 
-        <section class="solution-section" aria-labelledby="ferramentas">
-          <h2 id="ferramentas">Ferramentas</h2>
-          <div class="solution-tags"><span class="solution-tag">Python</span><span class="solution-tag">Excel</span></div>
-        </section>
+          <section class="solution-section" aria-labelledby="ferramentas">
+            <h2 id="ferramentas">Ferramentas</h2>
+            <div class="solution-tags"><span class="solution-tag">Python</span><span class="solution-tag">Excel</span></div>
+          </section>
+        </div>
 
         <section class="solution-section" aria-labelledby="uso">
           <h2 id="uso">Como usar a solução</h2>
@@ -156,6 +169,17 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
             <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Baixar anexo ↓</a>
           </div>
         </section>
+        <nav class="solution-index" aria-label="Índice da página">
+          <p class="solution-label">Nesta página</p>
+          <ol>
+            <li><a href="#descricao">Descrição da solução</a></li>
+            <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+            <li><a href="#sistemas">Sistemas que interagem</a></li>
+            <li><a href="#ferramentas">Ferramentas</a></li>
+            <li><a href="#uso">Como usar a solução</a></li>
+            <li><a href="#palavras-chave">Palavras-chave</a></li>
+          </ol>
+        </nav>
       </aside>
     </div>
   </div>
