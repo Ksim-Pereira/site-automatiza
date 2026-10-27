@@ -54,6 +54,18 @@ Phasellus iaculis congue sem eu congue. In varius felis ut tristique convallis. 
 Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamus accumsan non augue eget ultrices. Suspendisse eu euismod leo, ac luctus ex. Ut rhoncus magna sed volutpat interdum. Mauris quis tempus lorem.</p>
         </section>
 
+        <!--
+          Se necessário, remova "hidden", preencha o conteúdo e adicione o link
+          correspondente ao índice lateral. Use esta seção para regras de
+          preenchimento, limitações, conferência de resultados ou erros conhecidos.
+        -->
+        <section class="solution-section" aria-labelledby="observacoes" hidden>
+          <h2 id="observacoes">Observações</h2>
+          <div class="solution-use">
+            <p>Inclua aqui orientações específicas da solução.</p>
+          </div>
+        </section>
+
         <!-- Termos ocultos para indexação pela busca do site. -->
         <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: Gestão da Informação, Biblioteca</div>
       </main>
@@ -68,6 +80,9 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
             <li><a href="#sistemas">Sistemas que interagem</a></li>
             <li><a href="#ferramentas">Ferramentas</a></li>
             <li><a href="#uso">Como usar a solução</a></li>
+            <!-- Remova este comentário quando ativar a seção Observações.
+            <li><a href="#observacoes">Observações</a></li>
+            -->
           </ol>
         </nav>
         <section class="solution-info">
