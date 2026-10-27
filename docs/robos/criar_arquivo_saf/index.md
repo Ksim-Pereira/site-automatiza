@@ -16,8 +16,10 @@
       <main>
         <section class="solution-section" aria-labelledby="descricao">
           <h2 id="descricao">Descrição da solução</h2>
-          <p>Criar arquivo SAF a partir de documento em PDF e seus metadados em planilha Excel.</p>
+          <p>Criar arquivo SAF a partir de documento em PDF e seus metadados em planilha Excel.</p>        
         </section>
+
+        <!-- robot-flow -->
 
         <section class="solution-section" aria-labelledby="responsavel">
           <h2 id="responsavel">Responsável</h2>

@@ -186,3 +186,6 @@ plugins:
       video_controls: True
       video_autoplay: False
   - table-reader
+
+hooks:
+  - hooks/robot_flow.py

@@ -26,6 +26,63 @@ body p {
   text-indent: 0px
 }
 
+.md-typeset details.robot-flow {
+  background: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #111111;
+  margin: 0 0 1.7rem;
+  max-width: 100%;
+  padding: 0;
+  width: clamp(32rem, 70%, 48rem);
+}
+
+.md-typeset details.robot-flow > summary {
+  align-items: center;
+  background: #f3f3f3;
+  color: #111111;
+  cursor: pointer;
+  display: flex;
+  font-size: .8rem;
+  font-weight: 700;
+  justify-content: space-between;
+  line-height: 1.25;
+  list-style: none;
+  margin: 0;
+  padding: .55rem .75rem;
+}
+
+.md-typeset details.robot-flow > summary::-webkit-details-marker,
+.md-typeset details.robot-flow > summary::before,
+.md-typeset details.robot-flow > summary::after {
+  content: none !important;
+  display: none !important;
+}
+
+.md-typeset .robot-flow-toggle {
+  color: #111111;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform .15s ease;
+}
+
+.md-typeset details.robot-flow[open] .robot-flow-toggle {
+  transform: rotate(180deg);
+}
+
+.md-typeset details.robot-flow[open] > summary {
+  border-bottom: 1px solid #111111;
+}
+
+.md-typeset details.robot-flow > .mermaid {
+  background: #ffffff;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
 .content-wrapper {
   position: relative;
   display: block;
