@@ -88,9 +88,11 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
         <section class="solution-info">
           <p class="solution-label">Repositório e anexos</p>
           <div class="solution-actions">
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Repositório GitHub ↗</a>
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Outros links ↗</a>
-            <a class="solution-action solution-action--unavailable" href="#" aria-disabled="true" tabindex="-1">Baixar anexo ↓</a>
+            <!-- Para exibir um item opcional, adicione seu atributo href. -->
+            <a class="solution-action" data-optional-link href="https://www.google.com">Repositório GitHub ↗</a>
+            <a class="solution-action" data-optional-link href="https://www.google.com">Código-fonte ↗</a>
+            <a class="solution-action" data-optional-link href="https://www.google.com">Outros links ↗</a>
+            <a class="solution-action" data-optional-link href="https://www.google.com">Baixar anexo ↓</a>
           </div>
         </section>
       </aside>
