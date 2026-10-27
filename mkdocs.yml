@@ -182,7 +182,7 @@ plugins:
       categories_toc: true
       post_excerpt: required
   - tags:
-      tags_file: robos/index.md
+      tags_file: tags.md
   - mkdocs-video:
       video_muted: True
       video_controls: True
