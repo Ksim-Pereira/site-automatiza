@@ -1,0 +1,67 @@
+.solution-page {
+  --solution-ink: #111111;
+  --solution-muted: #5d5d5d;
+  --solution-line: #d8d8d8;
+  --solution-soft: #f3f3f3;
+  color: var(--solution-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: .5rem auto 1.5rem;
+  max-width: none;
+}
+
+.solution-page, .solution-page * { box-sizing: border-box; }
+.solution-page p { color: var(--solution-ink); line-height: 1.65; margin: 0; text-align: left; }
+.solution-page h1, .solution-page h2, .solution-page h3 { color: var(--solution-ink); font-family: inherit; }
+
+.solution-card { background: #ffffff; border: 0 solid var(--solution-line); border-top: 0 solid #111111; border-radius: 0; padding: 1rem 2rem 2rem; }
+.solution-top { display: flex; gap: 1.5rem; justify-content: space-between; }
+.solution-status { color: #111111; display: none; font-size: .78rem; font-weight: 700; margin: 0 0 .9rem; }
+.solution-page[data-verified="true"] .solution-status { display: block; }
+.solution-status::before { content: "✓ "; }
+.solution-page h1 { font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.15; margin: 0 0 .55rem; }
+.solution-date { color: var(--solution-muted) !important; font-size: .84rem; }
+
+.solution-layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) clamp(280px, 22vw, 340px); margin-top: 2rem; }
+.solution-section { margin-bottom: 1.7rem; }
+.solution-section h2 { border-left: 4px solid #111111; font-size: 1rem; margin: 0 0 .7rem; padding-left: .55rem; }
+.solution-meta-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 1.7rem; }
+.solution-meta-grid .solution-section { margin-bottom: 0; }
+.solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.solution-tag { background: var(--solution-soft); border: 1px solid #dedede; border-radius: 4px; color: #111111; font-size: .77rem; padding: .25rem .5rem; }
+.solution-use { white-space: pre-line; }
+
+.solution-sidebar { align-content: start; align-self: start; display: grid; gap: .7rem; position: sticky; top: calc(var(--md-header-height, 2.4rem) + 1rem); }
+.solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
+.solution-contact { color: var(--solution-ink); overflow-wrap: anywhere; }
+.solution-info { border: 1px solid var(--solution-line); border-radius: 7px; padding: .9rem 1rem; }
+.solution-info:not(:has(.solution-action[href])) { display: none; }
+.solution-info p { font-size: .8rem; }
+.solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
+.solution-actions { display: grid; gap: .55rem; }
+.solution-action { border: 1px solid currentColor; border-radius: 5px; display: block; font-size: .8rem; font-weight: 700; padding: .6rem .7rem; text-decoration: none; }
+.solution-action[data-optional-link]:not([href]) { display: none; }
+.solution-index { border: 1px solid var(--solution-line); border-radius: 7px; padding: .9rem 1rem; }
+.solution-index ol { margin: 0; padding-left: 1.2rem; }
+.solution-index li + li { margin-top: .4rem; }
+.solution-index a { color: var(--solution-ink); font-size: .84rem; text-decoration-thickness: 1px; text-underline-offset: .15em; }
+.solution-page .solution-action--unavailable { background: #fff5f5; border-color: #b42318 !important; color: #b42318 !important; cursor: not-allowed; opacity: .9; pointer-events: none; }
+
+/* Layout amplo somente para páginas de solução, em telas de computador. */
+@media (min-width: 721px) {
+  body:has(.solution-page) .md-grid { max-width: calc(100vw - 2rem) !important; }
+  body:has(.solution-page) .md-sidebar--primary,
+  body:has(.solution-page) .md-sidebar--secondary { display: none; }
+  body:has(.solution-page) .md-content { flex: 1 1 100% !important; max-width: none !important; width: 100% !important; }
+}
+
+@media (max-width: 720px) {
+  .solution-card { padding: 1.25rem; }
+  .solution-top { align-items: flex-start; flex-direction: column; }
+  .solution-layout { grid-template-columns: 1fr; }
+  .solution-meta-grid { grid-template-columns: 1fr; }
+  .solution-sidebar { position: static; }
+}
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  .solution-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
