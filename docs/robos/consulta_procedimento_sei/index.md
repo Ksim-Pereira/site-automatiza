@@ -10,11 +10,11 @@
         <section class="solution-section" aria-labelledby="sistemas"><h2 id="sistemas">Sistemas que interagem</h2><div class="solution-tags"><span class="solution-tag">SEI!MG</span></div></section>
         <section class="solution-section" aria-labelledby="ferramentas"><h2 id="ferramentas">Ferramentas</h2><div class="solution-tags"><span class="solution-tag">Power Automate Desktop</span></div></section>
       </div>
-      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">Os arquivos necessários estão disponíveis nos anexos, incluindo o código-fonte e os arquivos de apoio. Baixe os anexos e copie o código do robô (<code>codigo_fonte.txt</code>) para um novo fluxo no Power Automate Desktop.
-
-Configure as variáveis de entrada <code>api_sei_sistema</code>, que identifica o ambiente ou sistema SEI; <code>api_sei_token</code>, que contém o token de autenticação da API; e <code>api_sei_unidade</code>, que recebe o código da unidade utilizada na execução.
-
-Após preencher as variáveis e garantir a disponibilidade dos anexos na estrutura esperada, o robô estará pronto para execução. O código pode ser ajustado às regras e necessidades do processo.
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">  
+      1. Copie o código do robô e cole em um novo fluxo Power Automate Desktop.
+      2. Crie a variável de entrada api_sei_sistema.
+      3. Crie a variável de entrada api_sei_token.
+      4. Crie a variável de entrada api_sei_unidade.
 
 Links de instrução:
 1. <a href="https://automatiza-mg.github.io/automatizacoes/blog/criando-sistema-e-token-no-sei-para-utilizar-o-rob%C3%B4-de-api-do-sei/" target="_blank" rel="noopener">Criar sistema e token no SEI</a>.
