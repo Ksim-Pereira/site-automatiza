@@ -36,14 +36,13 @@
 .solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
 .solution-contact { color: var(--solution-link); overflow-wrap: anywhere; }
 .solution-contact:hover { color: var(--solution-primary); }
-.solution-info { background: var(--solution-primary); border: 0; border-radius: 0; padding: 1rem; }
-.solution-info .solution-label { color: #fff; }
+.solution-info { background: #fff; border: 1px solid var(--solution-line); border-radius: .55rem; padding: 1rem; }
 .solution-info:not(:has(.solution-action[href])) { display: none; }
 .solution-info p { font-size: .8rem; }
 .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
 .solution-actions { display: grid; gap: .55rem; }
-.solution-action { background: var(--solution-primary); border: 1px solid var(--solution-primary); border-radius: .4rem; color: #fff; display: block; font-size: .84rem; font-weight: 700; line-height: 1.35; padding: .65rem .75rem; text-decoration: none; transition: background-color .15s ease, border-color .15s ease; }
-.solution-action:hover { background: var(--solution-link); border-color: var(--solution-link); color: #fff; }
+.solution-page .solution-action { background: var(--solution-primary); border: 1px solid var(--solution-primary); border-radius: .4rem; color: #fff; display: block; font-size: .84rem; font-weight: 700; line-height: 1.35; padding: .65rem .75rem; text-decoration: none; transition: background-color .15s ease, border-color .15s ease; }
+.solution-page .solution-action:hover { background: var(--solution-link); border-color: var(--solution-link); color: #fff; }
 .solution-action:focus-visible, .solution-index a:focus-visible, .solution-contact:focus-visible { border-radius: .15rem; outline: 3px solid rgb(10 101 193 / .35); outline-offset: 3px; }
 .solution-action[data-optional-link]:not([href]) { display: none; }
 .solution-index { background: #fff; border: 1px solid var(--solution-line); border-radius: .55rem; padding: 1rem; }
@@ -56,6 +55,7 @@
 /* Layout amplo somente para páginas de solução, em telas de computador. */
 @media (min-width: 721px) {
   body:has(.solution-page) .md-grid { max-width: calc(100vw - 2rem) !important; }
+  body:has(.solution-page) .md-main__inner { margin-top: 0; }
   body:has(.solution-page) .md-sidebar--primary,
   body:has(.solution-page) .md-sidebar--secondary { display: none; }
   body:has(.solution-page) .md-content { flex: 1 1 100% !important; max-width: none !important; width: 100% !important; }
