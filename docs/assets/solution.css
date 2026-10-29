@@ -5,7 +5,6 @@
   --solution-muted: #526174;
   --solution-line: #cbd5e1;
   --solution-soft: #f5f7fb;
-  --solution-focus: #0a65c1;
   color: var(--solution-ink);
   font-family: var(--md-text-font-family, "Plus Jakarta Sans", sans-serif);
   margin: .75rem auto 2rem;
@@ -16,7 +15,7 @@
 .solution-page p { color: var(--solution-ink); line-height: 1.65; margin: 0; text-align: left; }
 .solution-page h1, .solution-page h2, .solution-page h3 { color: var(--solution-primary); font-family: inherit; }
 
-.solution-card { background: #fff; border: 1px solid var(--solution-line); border-top: 4px solid var(--solution-primary); border-radius: .65rem; box-shadow: 0 1px 2px rgb(15 27 64 / .06); padding: 1.5rem 2rem 2rem; }
+.solution-card { background: #fff; border: 0; border-radius: 0; box-shadow: none; padding: 1.5rem 2rem 2rem; }
 .solution-top { display: flex; gap: 1.5rem; justify-content: space-between; }
 .solution-status { background: #eaf4ee; border-radius: .25rem; color: #1f5f3b; display: none; font-size: .78rem; font-weight: 700; line-height: 1.45; margin: 0 0 .9rem; padding: .35rem .55rem; width: fit-content; }
 .solution-page[data-verified="true"] .solution-status { display: block; }
@@ -37,7 +36,8 @@
 .solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
 .solution-contact { color: var(--solution-link); overflow-wrap: anywhere; }
 .solution-contact:hover { color: var(--solution-primary); }
-.solution-info { background: #fff; border: 1px solid var(--solution-line); border-radius: .55rem; padding: 1rem; }
+.solution-info { background: var(--solution-primary); border: 0; border-radius: 0; padding: 1rem; }
+.solution-info .solution-label { color: #fff; }
 .solution-info:not(:has(.solution-action[href])) { display: none; }
 .solution-info p { font-size: .8rem; }
 .solution-info strong { display: block; font-size: .94rem; margin-top: .18rem; }
@@ -59,6 +59,7 @@
   body:has(.solution-page) .md-sidebar--primary,
   body:has(.solution-page) .md-sidebar--secondary { display: none; }
   body:has(.solution-page) .md-content { flex: 1 1 100% !important; max-width: none !important; width: 100% !important; }
+  .solution-card { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); width: 100vw; }
 }
 
 @media (max-width: 720px) {
