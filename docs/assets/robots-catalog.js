@@ -26,9 +26,12 @@
     var url = new URL(item.location, root);
     var page = new DOMParser().parseFromString(html || item.text || '', 'text/html');
     var searchText = text(page.body);
-    var title = text(page.querySelector('.solution-page h1, h1')) || item.title || '';
+    var solutionPage = page.querySelector('.solution-page');
+    var title = text(solutionPage && solutionPage.querySelector('h1')) || item.title || '';
     var id = window.solutionIds ? window.solutionIds.get(url) : '';
-    var summary = text(page.querySelector('.solution-page #descricao + p')) || description(searchText, title);
+    var summary = solutionPage
+      ? text(solutionPage.querySelector('#descricao + p')) || description(searchText, title)
+      : 'Clique para saber mais da solução';
     return {
       title: title,
       description: summary,
