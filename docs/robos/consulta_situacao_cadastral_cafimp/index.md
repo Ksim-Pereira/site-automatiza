@@ -17,7 +17,7 @@
       4. Crie a variável de entrada Caminho_pasta_automatiza onde serão salvos os prints de tela com os resultados das consultas.
       </p></section>
       <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p>Versão Power Automate: 2.39.00239.23332</p></section>
-      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: compras públicas; fornecedores; CAFIMP</div>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: compras</div>
     </main><aside class="solution-sidebar" aria-label="Informações da solução">
       <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#pre-requisitos">Pré-requisitos</a></li><li><a href="#sistemas">Sistemas que interagem</a></li><li><a href="#ferramentas">Ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
       <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" data-optional-link href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/main/robos/site/consulta_situacao_cadastral_cafimp.txt" target="_blank" rel="noopener">Código-fonte ↗</a>

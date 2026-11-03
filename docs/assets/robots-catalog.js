@@ -22,22 +22,39 @@
     return excerpt(content.replace(title, '').trim());
   }
 
+  function keywords(value) {
+    return value.replace(/^palavras-chave\s*:\s*/i, '').split(/[;,]/).map(function (tag) {
+      return tag.trim();
+    }).filter(Boolean);
+  }
+
   function robot(item, root, html) {
     var url = new URL(item.location, root);
     var page = new DOMParser().parseFromString(html || item.text || '', 'text/html');
     var searchText = text(page.body);
     var solutionPage = page.querySelector('.solution-page');
     var title = text(solutionPage && solutionPage.querySelector('h1')) || item.title || '';
+    var descriptionText = text(solutionPage && solutionPage.querySelector('#descricao + p'));
+    var systems = text(solutionPage && solutionPage.querySelector('#sistemas + .solution-tags'));
+    var pageTags = Array.prototype.map.call(
+      solutionPage ? solutionPage.querySelectorAll('.solution-keywords') : [],
+      function (element) { return keywords(text(element)); }
+    ).reduce(function (all, tags) { return all.concat(tags); }, []);
+    var catalogTags = Array.isArray(item.tags) ? item.tags : (item.tags ? [item.tags] : []);
+    var tags = catalogTags.concat(pageTags).filter(function (tag, index, all) {
+      return tag && all.indexOf(tag) === index;
+    });
     var id = window.solutionIds ? window.solutionIds.get(url) : '';
     var summary = solutionPage
-      ? text(solutionPage.querySelector('#descricao + p')) || description(searchText, title)
+      ? descriptionText || description(searchText, title)
       : 'Clique para saber mais da solução';
     return {
       title: title,
       description: summary,
-      searchText: searchText,
-      search: searchable(title + ' ' + summary + ' ' + searchText + ' ' + id),
+      // A busca do catálogo é limitada aos metadados da solução.
+      search: searchable(title + ' ' + descriptionText + ' ' + systems + ' ' + tags.join(' ')),
       id: id,
+      tags: tags,
       url: url
     };
   }
@@ -52,6 +69,15 @@
     tag.className = 'robots-catalog__tag';
     tag.textContent = robot.id ? 'ID: ' + robot.id : '';
     tag.hidden = !robot.id;
+    var tags = document.createElement('div');
+    tags.className = 'robots-catalog__tags';
+    robot.tags.forEach(function (value) {
+      var keyword = document.createElement('span');
+      keyword.className = 'robots-catalog__keyword';
+      keyword.textContent = value;
+      tags.appendChild(keyword);
+    });
+    tags.hidden = !robot.tags.length;
     var title = document.createElement('h2');
     title.textContent = robot.title;
     var description = document.createElement('p');
@@ -60,6 +86,7 @@
     link.href = robot.url;
     link.textContent = 'Ver solu\u00e7\u00e3o \u203a';
     top.appendChild(tag);
+    top.appendChild(tags);
     card.appendChild(top);
     card.appendChild(title);
     card.appendChild(description);

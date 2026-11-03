@@ -17,7 +17,7 @@
 
 Mais detalhes: <a href="https://automatiza-mg.github.io/automatizacoes/blog/criando-agendamentos-power-automate/" target="_blank" rel="noopener">criando agendamentos no Power Automate</a>.</p></section>
       <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p>Versão Python: 3.10.12 ou superior</p></section>
-      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: Agendamento; Automação</div>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: Python</div>
     </main><aside class="solution-sidebar" aria-label="Informações da solução">
       <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#pre-requisitos">Pré-requisitos</a></li><li><a href="#sistemas">Sistemas que interagem</a></li><li><a href="#ferramentas">Ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
       <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" data-optional-link target="_blank" rel="noopener">Outros links ↗</a></div></section>

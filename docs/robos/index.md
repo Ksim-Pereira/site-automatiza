@@ -10,7 +10,7 @@ hide:
     <p>Explore soluções para melhorar processos de trabalho.</p>
     <label class="robots-catalog__search" for="robots-catalog-search">
       <span class="robots-catalog__search-icon" aria-hidden="true">⌕</span>
-      <input id="robots-catalog-search" type="search" placeholder="Busque por problema, ferramenta, sistema ou palavra-chave" autocomplete="off">
+      <input id="robots-catalog-search" type="search" placeholder="Busque por título, descrição, sistema ou palavra-chave" autocomplete="off">
     </label>
   </header>
 
