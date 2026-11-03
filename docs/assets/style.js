@@ -62,3 +62,11 @@ if (downloadButton) {
     }
   });
 }
+
+// Permite recolher o fluxo do robô clicando em qualquer ponto do diagrama aberto.
+document.addEventListener('click', function(event) {
+  var flow = event.target.closest('details.robot-flow[open]');
+  if (flow && !event.target.closest('summary')) {
+    flow.open = false;
+  }
+});

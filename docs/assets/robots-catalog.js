@@ -15,6 +15,7 @@
       .then(function (html) {
         var page = new DOMParser().parseFromString(html, 'text/html');
         var title = text(page.querySelector('.solution-page h1, .md-content h1')) || fallback.title;
+        var searchText = text(page.querySelector('.solution-page, .md-content'));
         var description = text(page.querySelector('.solution-page #descricao + p'));
         if (!description) {
           var general = Array.prototype.find.call(page.querySelectorAll('.md-content h2'), function (heading) {
@@ -22,20 +23,21 @@
           });
           description = general ? text(general.parentElement.querySelector('li')) : '';
         }
-        return { title: title, description: description, url: url };
+        return { title: title, description: description, searchText: searchText, id: window.solutionIds ? window.solutionIds.get(url) : '', url: url };
       })
-      .catch(function () { return { title: fallback.title, description: '', url: url }; });
+      .catch(function () { return { title: fallback.title, description: '', searchText: fallback.title, id: window.solutionIds ? window.solutionIds.get(url) : '', url: url }; });
   }
 
   function createCard(robot) {
     var card = document.createElement('article');
     card.className = 'robots-catalog__card';
-    card.dataset.search = searchable(robot.title + ' ' + robot.description);
+    card.dataset.search = searchable(robot.title + ' ' + robot.description + ' ' + robot.searchText + ' ' + robot.id);
     var top = document.createElement('div');
     top.className = 'robots-catalog__card-top';
     var tag = document.createElement('span');
     tag.className = 'robots-catalog__tag';
-    tag.textContent = 'ROB\u00d4';
+    tag.textContent = robot.id ? 'ID: ' + robot.id : '';
+    tag.hidden = !robot.id;
     var title = document.createElement('h2');
     title.textContent = robot.title;
     var description = document.createElement('p');
