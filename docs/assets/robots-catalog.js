@@ -52,7 +52,7 @@
       title: title,
       description: summary,
       // A busca do catálogo é limitada aos metadados da solução.
-      search: searchable(title + ' ' + descriptionText + ' ' + systems + ' ' + tags.join(' ')),
+      search: searchable(title + ' ' + descriptionText + ' ' + systems + ' ' + tags.join(' ') + ' ' + id),
       id: id,
       tags: tags,
       url: url
@@ -65,10 +65,6 @@
     card.dataset.search = robot.search;
     var top = document.createElement('div');
     top.className = 'robots-catalog__card-top';
-    var tag = document.createElement('span');
-    tag.className = 'robots-catalog__tag';
-    tag.textContent = robot.id ? 'ID: ' + robot.id : '';
-    tag.hidden = !robot.id;
     var tags = document.createElement('div');
     tags.className = 'robots-catalog__tags';
     robot.tags.forEach(function (value) {
@@ -85,7 +81,6 @@
     var link = document.createElement('a');
     link.href = robot.url;
     link.textContent = 'Ver solu\u00e7\u00e3o \u203a';
-    top.appendChild(tag);
     top.appendChild(tags);
     card.appendChild(top);
     card.appendChild(title);
