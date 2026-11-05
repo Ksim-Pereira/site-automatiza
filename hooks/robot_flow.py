@@ -1,6 +1,5 @@
 """Renderiza, de forma condicional, o fluxo Mermaid de uma página de robô."""
 
-from html import escape
 from pathlib import Path
 
 
@@ -33,12 +32,15 @@ def on_page_markdown(markdown, *, page, config, files):
     if not flow:
         return markdown.replace(MARKER, "")
 
-    panel = f'''<details class="robot-flow">
+    # Let SuperFences create the Mermaid element.  A raw HTML div is not
+    # consistently picked up by the Mermaid renderer after the page is built.
+    panel = f'''<details class="robot-flow" markdown="1">
 <summary><span>Clique para ver o fluxo da solução</span><span class="robot-flow-toggle" aria-hidden="true">⌄</span></summary>
-<div class="mermaid">
+
+```mermaid
 %%{{init: {{'themeVariables': {{'fontSize': '15px'}}}}}}%%
-{escape(flow)}
-</div>
+{flow}
+```
 </details>'''
 
     return markdown.replace(MARKER, panel)
