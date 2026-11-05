@@ -23,6 +23,7 @@ def on_page_markdown(markdown, *, page, config, files):
     panel = f'''<details class="robot-flow">
 <summary><span>Clique para ver o fluxo do robô</span><span class="robot-flow-toggle" aria-hidden="true">⌄</span></summary>
 <div class="mermaid">
+%%{{init: {{'themeVariables': {{'fontSize': '15px'}}}}}}%%
 {escape(flow)}
 </div>
 </details>'''

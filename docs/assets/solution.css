@@ -31,6 +31,7 @@
 .solution-layout main > .solution-section:has(#responsavel) { grid-column: 1; }
 .solution-layout main > .solution-section:has(#requisitos-sistemas-ferramentas) { grid-column: 2; }
 .solution-section h2 { border-left: 4px solid var(--solution-link); font-size: 1.05rem; line-height: 1.35; margin: 0 0 .75rem; padding-left: .65rem; }
+.solution-layout main > details.robot-flow { grid-column: 1 / -1; width: 100%; }
 .solution-meta-grid { margin-bottom: 0; }
 .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
 .solution-tag { background: #fff; border: 1px solid var(--solution-line); border-radius: 999px; color: var(--solution-primary); font-size: .78rem; font-weight: 600; line-height: 1.35; padding: .28rem .55rem; }
