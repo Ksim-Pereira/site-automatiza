@@ -12,7 +12,7 @@
 }
 
 .solution-page, .solution-page * { box-sizing: border-box; }
-.solution-page p { color: var(--solution-ink); line-height: 1.65; margin: 0; text-align: left; }
+.solution-page p { color: var(--solution-ink); font-size: .94rem; line-height: 1.65; margin: 0; text-align: left; }
 .solution-page h1, .solution-page h2, .solution-page h3 { color: var(--solution-primary); font-family: inherit; }
 
 .solution-card { background: #fff; border: 0; border-radius: 0; box-shadow: none; padding: 1.5rem 2rem 2rem; }
