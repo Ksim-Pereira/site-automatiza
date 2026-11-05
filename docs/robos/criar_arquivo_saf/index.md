@@ -32,7 +32,7 @@
 
         <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas">
           <h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2>
-          <div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag">Biblioteca Pandas</span><span class="solution-tag">Biblioteca OpenPyXL</span><span class="solution-tag">Local</span><span class="solution-tag">Python</span><span class="solution-tag">Excel</span></div></div>
+          <div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Biblioteca Pandas</span><span class="solution-tag solution-tag--prerequisite">Biblioteca OpenPyXL</span><span class="solution-tag solution-tag--system">Local</span><span class="solution-tag solution-tag--tool">Python</span><span class="solution-tag solution-tag--tool">Excel</span></div></div>
         </section>
 
         <section class="solution-section" aria-labelledby="uso">

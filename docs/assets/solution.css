@@ -34,7 +34,10 @@
 .solution-layout main > details.robot-flow { grid-column: 1 / -1; width: 100%; }
 .solution-meta-grid { margin-bottom: 0; }
 .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
-.solution-tag { background: #fff; border: 1px solid var(--solution-line); border-radius: 999px; color: var(--solution-primary); font-size: .78rem; font-weight: 600; line-height: 1.35; padding: .28rem .55rem; }
+.solution-tag { background: #fff; border: 2px solid var(--solution-line); border-radius: 999px; color: var(--solution-primary); font-size: .78rem; font-weight: 600; line-height: 1.35; padding: .28rem .55rem; }
+.solution-tag--prerequisite { border-color: #a8d3ff; }
+.solution-tag--system { border-color: #1976d2; }
+.solution-tag--tool { border-color: #0f1b40; }
 .solution-use { white-space: pre-line; }
 
 .solution-sidebar { align-content: start; align-self: start; display: grid; gap: .7rem; position: sticky; top: calc(var(--md-header-height, 2.4rem) + 1rem); }
