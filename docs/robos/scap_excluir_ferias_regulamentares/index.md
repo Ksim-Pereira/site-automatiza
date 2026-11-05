@@ -21,7 +21,7 @@ tags:
 - [x] Robô destinado a excluir o registro de férias regulamentares no SISAP para os servidores através da utilização da rotina Férias Regulamentares, opção 03 - Excluir Férias Regulamentares, desde que não tenha sido gerado o pagamento de 1/3 de férias.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/scap_excluir_ferias_regulamentares/assets/fluxo.md"

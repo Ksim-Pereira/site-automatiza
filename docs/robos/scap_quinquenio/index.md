@@ -21,7 +21,7 @@ tags:
 - [x] Robô destinado a inclusão de Quinquênio no SISAP para os servidores através da utilização da rotina Quinquênio adicional 10%, opção 01 - Incluir Quinquênio.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/scap_quinquenio/assets/fluxo.md"

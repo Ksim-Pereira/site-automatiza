@@ -27,7 +27,7 @@ Para o caso de empresas sediadas em Minas Gerais e Belo Horizonte, há também a
 
 A representação desse fluxo inicialmente proposto para o robô:
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/emissão_de_certidões_de_fornecedores/assets/fluxo.md"

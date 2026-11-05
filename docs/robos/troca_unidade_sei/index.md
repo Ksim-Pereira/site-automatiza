@@ -22,7 +22,7 @@ tags:
 - [x] Aguarda o carregamento das páginas para garantir que tudo esteja certo.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/troca_unidade_sei/assets/fluxo.md"

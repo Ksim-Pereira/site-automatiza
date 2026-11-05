@@ -22,7 +22,7 @@ tags:
 - [x] Robô destinado a inclusão de Faltas relativas a meses anteriores através da utilização da rotina Histórico Servidor, opção 21 - Faltas, opção 01 - Incluir Histórico Faltas Consolidadas e lançamento da verba 7506 com o valor da falta a ser descontada, através da rotina Manutenção Dados Financeiros, opção 01 - Lançamento Cargo Código de Recebimento
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/rh_falta_rotina_normal/assets/fluxo.md"

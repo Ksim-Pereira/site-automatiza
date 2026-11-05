@@ -22,7 +22,7 @@ tags:
 - [x] Robô destinado a inclusão de Concessão de Férias Prêmio no SISAP para os servidores através da utilização da rotina Férias Prêmio, opção 01 - Concessão de Férias Prêmio, opção 01 - Incluir Concessão de Férias Prêmio.
 - [x] Reduz consideravelmente o tempo no procedimento e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/inclusao_ferias_premio/assets/fluxo.md"

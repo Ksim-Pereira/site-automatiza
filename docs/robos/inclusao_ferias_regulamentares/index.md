@@ -22,7 +22,7 @@ tags:
 - [x] Robô destinado a inclusão de Férias Regulamentares no SISAP para os servidores através da utilização da rotina Férias Regulamentares, opção 01 - Incluir Férias Regulamentares.
 - [x] Reduz consideravelmente o tempo no procedimento e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/inclusao_ferias_regulamentares/assets/fluxo.md"

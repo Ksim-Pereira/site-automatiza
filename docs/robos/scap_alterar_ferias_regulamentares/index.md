@@ -21,7 +21,7 @@ tags:
 - [x] Robô destinado a alterar o registro de férias regulamentares no SISAP para os servidores através da utilização da rotina Férias Regulamentares, opção 02 - Alterar Férias Regulamentares.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/scap_alterar_ferias_regulamentares/assets/fluxo.md"

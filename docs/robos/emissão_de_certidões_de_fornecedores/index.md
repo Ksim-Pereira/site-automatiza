@@ -22,7 +22,7 @@ tags:
 - [x] Depende de planilha de apoio para pesquisar os CNPJ e anotar os resultados das consultas ao sites das certidões.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/emissão_de_certidões_de_fornecedores/assets/fluxo.md"

@@ -22,7 +22,7 @@ tags:
 - [x] Robô realiza a inclusão de Faltas para a taxação vigente através da utilização da rotina Faltas Consolidada Pagamento, opção 01 - Incluir Faltas Consolidadas.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/rh_falta_rotina_historico/index.md"

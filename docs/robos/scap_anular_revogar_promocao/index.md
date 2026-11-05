@@ -21,7 +21,7 @@ tags:
 - [x] Robô destinado a anular o registro de promoção no SISAP para os servidores através da utilização da rotina Evolução na Carreira, opção 10 - Anular Promoção.
 - [x] Economiza tempo e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/scap_anular_revogar_promocao/assets/fluxo.md"

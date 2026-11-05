@@ -24,7 +24,7 @@ tags:
 - [x] Repete o procedimento a partir do momento do cadastro de novo usuário.
 - [x] Reduz consideravelmente o tempo no procedimento e evita erros.
 
-??? note "**Clique para ver o fluxo do robô**"
+??? note "**Clique para ver o fluxo da solução**"
 
     ```mermaid
     --8<-- "docs/robos/cadastro_novo_usuario_sei/assets/fluxo.md"
