@@ -25,7 +25,11 @@
 .solution-identifier { color: inherit; }
 
 .solution-layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) clamp(280px, 22vw, 340px); margin-top: 2rem; }
+.solution-layout main { column-gap: 2rem; display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); }
 .solution-section { margin-bottom: 1.7rem; }
+.solution-layout main > .solution-section { grid-column: 1 / -1; }
+.solution-layout main > .solution-section:has(#responsavel) { grid-column: 1; }
+.solution-layout main > .solution-section:has(#requisitos-sistemas-ferramentas) { grid-column: 2; }
 .solution-section h2 { border-left: 4px solid var(--solution-link); font-size: 1.05rem; line-height: 1.35; margin: 0 0 .75rem; padding-left: .65rem; }
 .solution-meta-grid { margin-bottom: 0; }
 .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
@@ -69,6 +73,7 @@
   .solution-card { border-left: 0; border-radius: 0; border-right: 0; box-shadow: none; margin-inline: -1rem; padding: 1.25rem 1rem; }
   .solution-top { align-items: flex-start; flex-direction: column; }
   .solution-layout { grid-template-columns: 1fr; }
+  .solution-layout main { display: block; }
   .solution-sidebar { position: static; }
   .solution-responsible p { grid-template-columns: 1fr; gap: .1rem; }
 }
