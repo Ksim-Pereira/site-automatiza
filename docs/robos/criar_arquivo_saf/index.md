@@ -4,6 +4,7 @@
 <!-- Para trocar a pessoa responsável, altere somente data-contact-name. -->
 <article class="solution-page" data-verified="false" data-contact-name="Autor Sobrenome e UltimoNome">
   <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
     <header class="solution-top">
       <div>
         <p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p>
@@ -83,5 +84,6 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
         </section>
       </aside>
     </div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
   </div>
 </article>

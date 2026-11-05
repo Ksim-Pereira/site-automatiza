@@ -16,6 +16,10 @@
 .solution-page h1, .solution-page h2, .solution-page h3 { color: var(--solution-primary); font-family: inherit; }
 
 .solution-card { background: #fff; border: 0; border-radius: 0; box-shadow: none; padding: 1.5rem 2rem 2rem; }
+.solution-page .solution-back { align-items: center; color: var(--solution-link); display: inline-flex; font-size: .86rem; font-weight: 700; gap: .35rem; margin: 0 0 1.25rem; text-decoration: none; }
+.solution-page .solution-back--bottom { margin: .5rem 0 0; }
+.solution-page .solution-back:hover { color: var(--solution-primary); text-decoration: underline; text-underline-offset: .15em; }
+.solution-page .solution-back:focus-visible { border-radius: .15rem; outline: 3px solid rgb(10 101 193 / .35); outline-offset: 3px; }
 .solution-top { display: flex; gap: 1.5rem; justify-content: space-between; }
 .solution-status { background: #eaf4ee; border-radius: .25rem; color: #1f5f3b; display: none; font-size: .78rem; font-weight: 700; line-height: 1.45; margin: 0 0 .9rem; padding: .35rem .55rem; width: fit-content; }
 .solution-page[data-verified="true"] .solution-status { display: block; }

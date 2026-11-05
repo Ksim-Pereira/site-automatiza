@@ -1,5 +1,6 @@
 <article class="solution-page" data-verified="false" data-contact-name="Automatiza-MG">
   <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
     <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Baixar processos e documentos SEI</h1><p class="solution-date">Publicada em 27/10/2026 · Atualizada em 27/10/2026</p></div></header>
     <div class="solution-layout"><main>
       <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p>Usa API do SEI para realizar downloads de processos SEI em PDF ou de todos os documentos de um processo em uma pasta ZIP.</p></section>
@@ -22,5 +23,6 @@ Links de instrução:
       <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
       <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" data-optional-link href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/api_sei.txt" target="_blank" rel="noopener">Código-fonte ↗</a></div></section>
     </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
   </div>
 </article>

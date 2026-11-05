@@ -1,5 +1,6 @@
 <article class="solution-page" data-verified="false" data-contact-name="Automatiza-MG">
   <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
     <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Consulta a situação cadastral de fornecedores - CAFIMP</h1><p class="solution-date">Publicada em 27/10/2026 · Atualizada em 27/10/2026</p></div></header>
     <div class="solution-layout"><main>
       <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p>Robô dedicado a facilitar a busca da situação cadastral de fornecedores.</p></section>
@@ -25,5 +26,6 @@
       </a>
       </div></section>
     </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
   </div>
 </article>
