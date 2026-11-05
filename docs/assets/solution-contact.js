@@ -75,12 +75,13 @@
             return normalize(row[nameIndex]) === personName;
           });
           var emailElement = solution.querySelector('[data-contact-email]');
-          var organizationElement = solution.querySelector('[data-contact-organization]');
+          var organizationRow = solution.querySelector('[data-contact-organization]');
+          var organizationElement = solution.querySelector('[data-contact-organization-name]') || organizationRow;
 
           if (!contact) {
             setText(emailElement, '', 'E-mail não cadastrado');
             if (emailElement) emailElement.removeAttribute('href');
-            if (organizationElement) organizationElement.hidden = true;
+            if (organizationRow) organizationRow.hidden = true;
             return;
           }
 
@@ -92,7 +93,7 @@
             else emailElement.removeAttribute('href');
           }
           setText(organizationElement, organization, '');
-          if (organizationElement) organizationElement.hidden = !organization;
+          if (organizationRow) organizationRow.hidden = !organization;
         });
       })
       .catch(function (error) {

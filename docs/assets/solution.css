@@ -27,8 +27,7 @@
 .solution-layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) clamp(280px, 22vw, 340px); margin-top: 2rem; }
 .solution-section { margin-bottom: 1.7rem; }
 .solution-section h2 { border-left: 4px solid var(--solution-link); font-size: 1.05rem; line-height: 1.35; margin: 0 0 .75rem; padding-left: .65rem; }
-.solution-meta-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 1.7rem; }
-.solution-meta-grid .solution-section { background: transparent; border: 1px solid #dde5ef; border-radius: .5rem; margin-bottom: 0; padding: 1rem; }
+.solution-meta-grid { margin-bottom: 0; }
 .solution-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
 .solution-tag { background: #fff; border: 1px solid var(--solution-line); border-radius: 999px; color: var(--solution-primary); font-size: .78rem; font-weight: 600; line-height: 1.35; padding: .28rem .55rem; }
 .solution-use { white-space: pre-line; }
@@ -37,6 +36,9 @@
 .solution-label { color: var(--solution-muted); font-size: .68rem; font-weight: 700; letter-spacing: .04em; margin: 0 0 .55rem !important; text-transform: uppercase; }
 .solution-contact { color: var(--solution-link); overflow-wrap: anywhere; }
 .solution-contact:hover { color: var(--solution-primary); }
+.solution-responsible { display: grid; gap: .35rem; }
+.solution-responsible p { align-items: baseline; display: grid; gap: .35rem; grid-template-columns: 3.5rem minmax(0, 1fr); }
+.solution-contact-label { color: var(--solution-ink); font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .solution-info { background: #fff; border: 1px solid var(--solution-line); border-radius: .55rem; padding: 1rem; }
 .solution-info:not(:has(.solution-action[href])) { display: none; }
 .solution-info p { font-size: .8rem; }
@@ -67,11 +69,6 @@
   .solution-card { border-left: 0; border-radius: 0; border-right: 0; box-shadow: none; margin-inline: -1rem; padding: 1.25rem 1rem; }
   .solution-top { align-items: flex-start; flex-direction: column; }
   .solution-layout { grid-template-columns: 1fr; }
-  .solution-meta-grid { grid-template-columns: 1fr; }
   .solution-sidebar { position: static; }
+  .solution-responsible p { grid-template-columns: 1fr; gap: .1rem; }
 }
-
-@media (min-width: 721px) and (max-width: 1000px) {
-  .solution-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
