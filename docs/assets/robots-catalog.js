@@ -13,7 +13,7 @@
     var limit = 180;
     if (value.length <= limit) return value;
     var end = value.lastIndexOf(' ', limit);
-    return value.slice(0, end > 0 ? end : limit) + '\u2026';
+    return value.slice(0, end > 0 ? end : limit) + ' [...]';
   }
 
   function description(content, title) {
@@ -46,7 +46,7 @@
     });
     var id = window.solutionIds ? window.solutionIds.get(url) : '';
     var summary = solutionPage
-      ? descriptionText || description(searchText, title)
+      ? excerpt(descriptionText) || description(searchText, title)
       : 'Clique para saber mais da solução';
     return {
       title: title,

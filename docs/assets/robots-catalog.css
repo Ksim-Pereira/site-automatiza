@@ -19,7 +19,7 @@
 .robots-catalog__count { color: var(--catalog-muted); font-size: .86rem; font-weight: 400; margin-left: .55rem; }
 .robots-catalog__sort { color: var(--catalog-muted); font-size: .8rem; font-weight: 700; letter-spacing: .05em; }
 .robots-catalog__grid { display: grid; gap: 1.15rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.robots-catalog__card { background: #fff; border: 1px solid var(--catalog-line); border-radius: .6rem; box-shadow: 0 1px 2px rgb(15 27 64 / .06); cursor: pointer; display: flex; flex-direction: column; min-height: 250px; min-width: 0; padding: 1.2rem; position: relative; transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.robots-catalog__card { aspect-ratio: 4 / 3; background: #fff; border: 1px solid var(--catalog-line); border-radius: .6rem; box-shadow: 0 1px 2px rgb(15 27 64 / .06); cursor: pointer; display: flex; flex-direction: column; min-width: 0; overflow: hidden; padding: 1.2rem; position: relative; transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
 .robots-catalog__card[hidden] { display: none; }
 .robots-catalog__card:hover { border-color: var(--catalog-link); box-shadow: 0 .45rem 1.25rem rgb(15 27 64 / .12); transform: translateY(-2px); }
 .robots-catalog__card:focus-within { border-color: var(--catalog-focus); box-shadow: 0 0 0 3px rgb(10 101 193 / .22); }
