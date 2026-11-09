@@ -1,79 +1,35 @@
----
-comments: true
-hide:
-  - navigation
-tags:
-  - Compras
----
-
-# Emite certidões de fornecedores para processos de compra
-
-
-## Informações gerais
-
-| **Desenvolvedores**| Extensionistas FJP (Diego Silva, João Vitor Fonseca e Leidi Alves) e Automatiza.MG (André Amorim)  |
-| ----------- | ------------------------------------ |
-| **E-mail**       | automatizamg@planejamento.mg.gov.br|
-| **Ferramenta**    | Power Automate Desktop |
-| **Versão Power Automate**    | 2.49.00202.24289 |
-
-- [x] Robô que emite certidões para instrução de processo de compra, principalmente o CRC a partir do CAGEF.
-- [x] Utiliza subfluxos para cada uma das certidões necessárias (CND, CNPJ, FGTS, Justiça), caso não haja CRC Ativo.
-- [x] Depende de planilha de apoio para pesquisar os CNPJ e anotar os resultados das consultas ao sites das certidões.
-- [x] Economiza tempo e evita erros.
-
-??? note "**Clique para ver o fluxo da solução**"
-
-    ```mermaid
-    --8<-- "docs/robos/emissão_de_certidões_de_fornecedores/assets/fluxo.md"
-    ```
-
---8<-- "docs/overrides/partials/modelo_robo/requisitos_montando_robo_cagef.md"
-
-<div class="grid" markdown>
-
-[:fontawesome-solid-1: :material-microsoft-excel: __Clique aqui para baixar a planilha modelo__](javascript:void(0);)[^1].
-{ #download-button .card path="assets/cnpj-fornecedores.csv" fileName="cnpj-fornecedores.xlsx" }
-
-[:fontawesome-solid-2: :octicons-copy-16: __Copie o código do robô - `Main`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/certidoes-fornecedores-main.txt){ target="_blank" }[^2] e cole em um novo fluxo do Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-3: :octicons-copy-16: __Copie o código do robô - `CRC`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/crc-cagef.txt){ target="_blank" }[^2], cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-4: :octicons-copy-16: __Copie o código do robô - `CNPJ`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta-cnpj.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-5: :octicons-copy-16: __Copie o código do robô - `CND_Federal`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-federal.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-6: :octicons-copy-16: __Copie o código do robô - `FGTS`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta_fgts.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-7: :octicons-copy-16: __Copie o código do robô - `Justiça_Trabalho`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta_justiça_trabalho.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-8: :octicons-copy-16: __Copie o código do robô - `CND_MG`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-mg-siare.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-9: :octicons-copy-16: __Copie o código do robô - `SIARE_SEF_MG`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/endereço-siare.txt) [^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.:warning:{ title='Para empresas de MG' }
-{ .card }
-
-[:fontawesome-solid-1::fontawesome-solid-0: :octicons-copy-16: __Copie o código do robô - `CND_PBH`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-pbh.txt){ target="_blank" }[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop. :warning:{ title='Para empresas de BH' }
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-1: :material-application-variable: __Crie a variável de entrada__ `planilha`[^3].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-2: :material-application-variable: __Crie a variável de entrada__ `pasta`[^4].
-{ .card }
-
-</div>
-
---8<-- "docs/overrides/partials/modelo_robo/ajuda.md"
-
-[^1]: Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O download desta planilha não é suportado na versão mobile desta página.
-[^2]: Na nova aba que será aberta, basta apertar ++ctrl+a++ para selecionar todo código e ++ctrl+c++ para copiar.
-[^3]: Contendo o caminho da pasta onde será salva a planilha-modelo.
-[^4]: Contendo o caminho da pasta onde serão salvos o CRC ou as certidões dos fornecedores.
-
+<article class="solution-page" data-verified="false" data-contact-name="Extensionistas FJP (Diego Silva, João Vitor Fonseca e Leidi Alves) e Automatiza.MG (André Amorim)">
+  <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+    <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Emite certidões de fornecedores para processos de compra</h1><p class="solution-date">Publicada em 08/11/2024 · Atualizada em 09/11/2026</p></div></header>
+    <div class="solution-layout"><main>
+      <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p class="solution-use">1. Clique em anexos para baixar a planilha modelo.
+2. Copie o código do robô - Main (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/certidoes-fornecedores-main.txt" target="_blank" rel="noopener">link</a>) e cole em um novo fluxo do Power Automate Desktop.
+3. Copie o código do robô - CRC (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/crc-cagef.txt" target="_blank" rel="noopener">link</a>), cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+4. Copie o código do robô - CNPJ (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta-cnpj.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+5. Copie o código do robô - CND_Federal (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-federal.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+6. Copie o código do robô - FGTS (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta_fgts.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+7. Copie o código do robô - Justiça_Trabalho (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/consulta_justi%C3%A7a_trabalho.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+8. Copie o código do robô - CND_MG (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-mg-siare.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+9. Copie o código do robô - SIARE_SEF_MG  (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/endere%C3%A7o-siare.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+10. Copie o código do robô - CND_PBH (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/certidoes_fornecedores/cnd-pbh.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+11. Crie a variável de entrada planilha.
+12. Crie a variável de entrada pasta.</p></section>
+      <!-- robot-flow -->
+      <section class="solution-section" aria-labelledby="responsavel"><h2 id="responsavel">Responsável</h2><div class="solution-responsible"><p><span class="solution-contact-label">Nome:</span><span>Extensionistas FJP (Diego Silva, João Vitor Fonseca e Leidi Alves) e Automatiza.MG (André Amorim)</span></p><p><span class="solution-contact-label">E-mail:</span><a class="solution-contact" href="mailto:automatizamg@planejamento.mg.gov.br">automatizamg@planejamento.mg.gov.br</a></p><p><span class="solution-contact-label">Órgão:</span><span>Seplag</span></p></div></section>
+      <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas"><h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2><div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Power Automate na versão correta</span><span class="solution-tag solution-tag--prerequisite">Extensão Chrome para Power Automate ativada</span><span class="solution-tag solution-tag--prerequisite">Perguntar onde salvar cada arquivo antes de fazer download nas configurações do navegador Chrome</span><span class="solution-tag solution-tag--prerequisite">Aceitar cookies nos sites das certidões</span><span class="solution-tag solution-tag--system">Power Automate Desktop</span><span class="solution-tag solution-tag--tool">Robô que emite certidões para instrução de processo de compra, principalmente o CRC a partir do CAGEF. Ele utiliza subfluxos para cada uma das certidões necessárias (CND, CNPJ, FGTS, Justiça), caso não haja CRC Ativo.</span></div></div></section>
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">1. Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O download desta planilha não é suportado na versão mobile desta página.
+2-10. Na nova aba que será aberta, basta apertar Ctrl+A para selecionar todo código e Ctrl+C para copiar.
+11. Contendo o caminho da pasta onde será salva a planilha-modelo.
+12. Contendo o caminho da pasta onde serão salvos o CRC ou as certidões dos fornecedores.
+0. Versão Power Automate: 2.39.00239.23332</p></section>
+      <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p class="solution-use">Compras</p></section>
+      <section class="solution-help" aria-labelledby="solution-help-title"><h2 id="solution-help-title"><span class="solution-help-icon" aria-hidden="true">?</span>Caso precise de ajuda</h2><div class="solution-help-content"><p>Algum erro está ocorrendo em uma das fases de criação de seu robô? Não tem problema. Acesse <a href="https://automatiza-mg.github.io/automatizacoes/blog/causas-comuns-de-erros-na-montagem-dos-fluxos-dos-rob%C3%B4s/">aqui</a> uma lista com causas de erros ou paradas do robô.</p><p>Para esclarecer dúvidas, recomendamos a participação em nosso Tira-Dúvidas, realizado todas as sextas-feiras, das 15h às 17h. Para participar, <a href="https://bit.ly/48A1Obu">acesse</a>.</p><p>Caso prefira, mande um e-mail para o endereço que está em <a href="#responsavel">“Responsável”</a>, mais acima nesta mesma página. Ele pertence ao criador / à criadora do robô, que poderá auxiliar com eventuais dúvidas.</p><p>Ótimo trabalho!</p></div></section>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: </div>
+    </main><aside class="solution-sidebar" aria-label="Informações da solução">
+      <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="./assets/cnpj-fornecedores.csv" download>Baixar anexo: cnpj-fornecedores.csv ↓</a></div></section>
+    </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+  </div>
+</article>

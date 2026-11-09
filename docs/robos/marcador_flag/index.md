@@ -1,82 +1,37 @@
----
-comments: true
-hide:
-  - navigation
-tags:
-  - SEI
----
-
-# Insere marcador Flag em processos PAD
-
-
-## Informações gerais
-
-| **Desenvolvedor**| Automatiza-mg  |
-| ----------- | ------------------------------------ |
-| **E-mail**       | automatizamg@planejamento.mg.gov.br|
-| **Ferramenta**    | Power Automate Desktop |
-| **Versão Power Automate**    | 2.58.00134.25188 |
-| **Extensão do SEI**    | SEI Pro |
-
-- [x] Robô tem como objetivo otimizar e agilizar o fluxo de trabalho, além de evitar erros ao realizar automaticamente as marcações de flag no SEI, direcionando os processos para a equipe especializada responsável pelo tratamento.
-- [x] Facilita o acesso ao SEI, baixa planilhas e realiza as marcações de flag com precisão.
-- [x] Aguarda o carregamento das páginas para garantir que tudo esteja certo.
-- [x] Economiza tempo e evita erros.
-
-??? note "**Clique para ver o fluxo da solução**"
-
-    ```mermaid
-    --8<-- "docs/robos/marcador_flag/assets/fluxo.md"
-    ```
-
---8<-- "docs/overrides/partials/modelo_robo/requisitos_montando_seu_proprio_robo.md"
-
-<div class="grid" markdown>
-
-:fontawesome-solid-1: :material-microsoft-excel: <a href="assets/recurso_PAD.xlsx"download="recurso_PAD">__Clique aqui para baixar a planilha-modelo.__ </a> [^1]
-{ .card }
-
-:fontawesome-solid-2: [:octicons-copy-16: __Copie o código do robô - Main__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_main.txt)[^2] e cole em um novo fluxo Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-3: [:octicons-copy-16: __Copie o código do robô - `login_sei`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/login_sei.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-4: [:octicons-copy-16: __Copie o código do robô - `excel`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_excel.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-5: [:octicons-copy-16: __Copie o código do robô - `gravar`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_gravar.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-6: [:octicons-copy-16: __Copie o código do robô - `marcar_processos`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_marcar_processos.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-7: [:octicons-copy-16: __Copie o código do robô - `marcador_flag`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_marcador_flag.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-8: :material-application-variable: __Crie a variável de entrada__ `login_sei`[^3].
-{ .card }
-
-:fontawesome-solid-9: :material-application-variable: __Crie a variável de entrada__ `senha_sei`[^4].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-0: :material-application-variable: __Crie a variável de entrada__ `orgao_sei`[^5].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-1: :material-application-variable: __Crie a variável de entrada__ `marcador`[^6].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-2: :material-application-variable: __Crie a variável de entrada__ `pasta_download`[^7].
-{ .card } 
-
-</div>
-
---8<-- "docs/overrides/partials/modelo_robo/ajuda.md"
-
-[^1]: Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O nome da aba "Recursos_2025" tem a ideia de ser atualizada anualmente, criando-se uma nova aba a cada ano. Este nome é vinculado no fluxo, devendo-se alterar o nome da aba no próprio robô no caso de alteração. O download desta planilha não é suportado na versão mobile desta página.
-[^2]: Na nova aba que será aberta, basta apertar ++ctrl+a++ para selecionar todo código e ++ctrl+c++ para copiar.
-[^3]: Login para entrar no SEI. Valor cadastrado para a variável deverá conter CPF com exatamente 11 caracteres numéricos. Favor não incluir pontos (.) ou hífen (-).
-[^4]: Senha para login no SEI. Recomendamos incluir esta variável como confidencial.
-[^5]: Órgão de login no SEI. Valor cadastrado para variável deverá ser exatamente igual à existente na lista de órgãos disponíveis na página inicial de login, inclusive com todas as letras maiúsculas.
-[^6]: Valor padrão: "Novas manifestações aguardando para distribuir".
-[^7]: Local e ou caminho da pasta dowload que irá receber o arquivo baixado. Exemplo: 'C:\Users\xxxx\Downloads'
+<article class="solution-page" data-verified="false" data-contact-name="Automatiza-mg">
+  <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+    <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Insere marcador Flag em processos PAD</h1><p class="solution-date">Publicada em 30/11/2023 · Atualizada em 09/11/2026</p></div></header>
+    <div class="solution-layout"><main>
+      <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p class="solution-use">Facilita o acesso ao SEI, baixa planilhas e realiza as marcações de flag com precisão. Aguarda o carregamento das páginas para garantir que tudo esteja certo.</p></section>
+      <!-- robot-flow -->
+      <section class="solution-section" aria-labelledby="responsavel"><h2 id="responsavel">Responsável</h2><div class="solution-responsible"><p><span class="solution-contact-label">Nome:</span><span>Automatiza-mg</span></p><p><span class="solution-contact-label">E-mail:</span><a class="solution-contact" href="mailto:automatizamg@planejamento.mg.gov.br">automatizamg@planejamento.mg.gov.br</a></p><p><span class="solution-contact-label">Órgão:</span><span>Seplag</span></p></div></section>
+      <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas"><h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2><div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Power Automate na versão correta</span><span class="solution-tag solution-tag--prerequisite">Chrome como navegador</span><span class="solution-tag solution-tag--prerequisite">Extensão Chrome para Power Automate ativada</span><span class="solution-tag solution-tag--system">SEI</span><span class="solution-tag solution-tag--tool">Power Automate Desktop</span></div></div></section>
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">1. Clique em anexos para baixar a planilha-modelo.
+2. Copie o código do robô - Main (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_main.txt" target="_blank" rel="noopener">link</a>) e cole em um novo fluxo Power Automate Desktop.
+3. Copie o código do robô - login_sei (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/login_sei.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+4. Copie o código do robô - excel (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_excel.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+5. Copie o código do robô - gravar (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_gravar.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+6. Copie o código do robô - marcar_processos (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_marcar_processos.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+7. Copie o código do robô - marcador_flag (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/marcador_flag/marcador_flag_marcador_flag.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+8. Crie a variável de entrada login_sei.
+9. Crie a variável de entrada senha_sei.
+10. Crie a variável de entrada orgao_sei.
+11. Crie a variável de entrada marcador.
+12. Crie a variável de entrada pasta_download</p></section>
+      <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p class="solution-use">1. Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O nome da aba "Recursos_2025" tem a ideia de ser atualizada anualmente, criando-se uma nova aba a cada ano. Este nome é vinculado no fluxo, devendo-se alterar o nome da aba no próprio robô no caso de alteração. O download desta planilha não é suportado na versão mobile desta página.
+2-7. Na nova aba que será aberta, basta apertar Ctrl+A para selecionar todo código e Ctrl+C para copiar.
+8. Login para entrar no SEI. Valor cadastrado para a variável deverá conter CPF com exatamente 11 caracteres numéricos. Favor não incluir pontos (.) ou hífen (-).
+9. Senha para login no SEI. Recomendamos incluir esta variável como confidencial.
+10. Órgão de login no SEI. Valor cadastrado para variável deverá ser exatamente igual à existente na lista de órgãos disponíveis na página inicial de login, inclusive com todas as letras maiúsculas.
+11. Valor padrão: "Novas manifestações aguardando para distribuir".
+12. Local e ou caminho da pasta dowload que irá receber o arquivo baixado. Exemplo: 'C:\Users\xxxx\Downloads'</p></section>
+      <section class="solution-help" aria-labelledby="solution-help-title"><h2 id="solution-help-title"><span class="solution-help-icon" aria-hidden="true">?</span>Caso precise de ajuda</h2><div class="solution-help-content"><p>Algum erro está ocorrendo em uma das fases de criação de seu robô? Não tem problema. Acesse <a href="https://automatiza-mg.github.io/automatizacoes/blog/causas-comuns-de-erros-na-montagem-dos-fluxos-dos-rob%C3%B4s/">aqui</a> uma lista com causas de erros ou paradas do robô.</p><p>Para esclarecer dúvidas, recomendamos a participação em nosso Tira-Dúvidas, realizado todas as sextas-feiras, das 15h às 17h. Para participar, <a href="https://bit.ly/48A1Obu">acesse</a>.</p><p>Caso prefira, mande um e-mail para o endereço que está em <a href="#responsavel">“Responsável”</a>, mais acima nesta mesma página. Ele pertence ao criador / à criadora do robô, que poderá auxiliar com eventuais dúvidas.</p><p>Ótimo trabalho!</p></div></section>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: SEI</div>
+    </main><aside class="solution-sidebar" aria-label="Informações da solução">
+      <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="./assets/recurso_PAD.xlsx" download>Baixar anexo: recurso_PAD.xlsx ↓</a></div></section>
+    </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+  </div>
+</article>

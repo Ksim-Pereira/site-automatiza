@@ -1,99 +1,30 @@
----
-comments: true
-hide:
-  - navigation
-tags:
-  - Gestão de Frota
----
-
-# Consulta a situação de veículos
-
-![type:video](https://www.youtube.com/embed/dUBgoYQbvHs)
-
-## Informações gerais
-
-| **Desenvolvedor**| Automatiza-mg  |
-| ----------- | ------------------------------------ |
-| **E-mail**       | automatizamg@planejamento.mg.gov.br|
-| **Ferramenta**    | Power Automate Desktop |
-| **Versão Power Automate**    | 2.39.00239.23332 |
-
-- [x] Robô desenvolvido para automatizar a consulta de multas veiculares, ideal para gestores de frotas com grande volume de veículos.
-- [x] Lê uma planilha Excel contendo placas e chassis dos veículos.
-- [x] Consulta automaticamente a situação dos veículos nos seguintes sites: Cidadão MG, Auto PRF e Portal de Multas de Trânsito (DNIT).
-
-Links utilizados:
-
-[Cidadão MG](https://cidadao.mg.gov.br/) | [Auto PRF](https://pesquisa-auto.prf.gov.br/#/pesquisa/consultar-debitos) | [Portal de Multas de Trânsito](https://servicos.dnit.gov.br/multas/nada-consta/emissao-certidao)
-
-
-- [x] Atualiza as informações diretamente na mesma planilha Excel, indicando o status de cada veículo em cada fonte consultada.
-- [x] Aguarda o carregamento completo das páginas para garantir que os dados estejam corretos.
-- [x] Reduz o tempo de trabalho manual e minimiza riscos
-
-## Pré-requisitos
-
-<div class="grid" markdown>
-
-:material-play-circle: __Power Automate__ na [versão correta](#informacoes-gerais)
-{ .card }
-
-:fontawesome-brands-chrome: __Chrome__ como navegador
-{ .card }
-
-:simple-gitextensions:  __Extensão Chrome__ para [Power Automate](https://chromewebstore.google.com/detail/microsoft-power-automate/ljglajjnnkapghbckkcmodicjhacbfhk) ativada.
-{ .card }
-
-:material-login-variant:  __Conta no site__ [cidadão.mg.gov.br](cidadão.mg.gov.br).
-{ .card }
-</div>
-
-## Montando o seu robô
-
-Este é um **protótipo de robô**.
-Entenda seu funcionamento e, caso precise, ajuste-o às suas necessidades.
-
-Para dar vida a ele:
-
-<div class="grid" markdown>
-
-:fontawesome-solid-1: :material-web: Faça login no site __[cidadao.mg.gov.br](cidadao.mg.gov.br)__.
-{ .card }
-
-[:fontawesome-solid-2: :material-microsoft-excel: __Clique aqui para baixar a planilha modelo__](javascript:void(0);)[^1].
-{ #download-button .card path="assets/planilha_modelo_multa.csv" fileName="planilha_modelo_multa.xlsx" }
-
-:fontawesome-solid-3: :material-square-edit-outline: __Complete as colunas da planilha modelo__ com a placa e o chassi dos veículos que serão consultados e salve.
-{ .card }
-
-[:fontawesome-solid-4: :octicons-copy-16: __Copie o código do robô - Main__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_main.txt)[^2] e cole em um novo fluxo Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-5: :octicons-copy-16: __Copie o código do robô - `DNIT`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_dnit.txt)[^2] e cole em um novo subfluxo com esse mesmo nome[^3] no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-6: :octicons-copy-16: __Copie o código do robô - `cidadao.mg`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_cidadao_mg.txt)[^2] e cole em um novo subfluxo com esse mesmo nome[^3] no Power Automate Desktop.
-{ .card }
-
-[:fontawesome-solid-7: :octicons-copy-16: __Copie o código do robô - `PRF`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_prf.txt)[^2] e cole em um novo subfluxo com esse mesmo nome[^3] no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-8: :material-application-variable: Abra a primeira ação  __'Iniciar Excel'__, edite o campo  __'caminho do documento'__ e selecione o documento salvo no passo anterior.
-{ .card }
-
-</div>
-
-!!! note "Observação"
-
-    Se o robô apresentar falhas no carregamento das páginas, algumas linhas poderão ficar em branco. Nessa situação, recomenda-se que o usuário salve a planilha e execute novamente o fluxo.
-  
-
---8<-- "docs/overrides/partials/modelo_robo/ajuda.md"
-
-[^1]: Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O download desta planilha não é suportado na versão mobile desta página.
-[^2]: Na nova aba que será aberta, basta apertar ++ctrl+a++ para selecionar todo código e ++ctrl+c++ para copiar.
-[^3]: O robô contém um fluxo principal chamado "Main" e três subfluxos, cada um responsável por consultar um dos sites.
-Para isso, é necessário criar três novos subfluxos. No canto superior direito da interface, clique em "Subfluxo" > "Novo subfluxo" e crie os seguintes fluxos: "DNIT", "PRF" e "cidadao.mg".
-Certifique-se de colar cada trecho de código no subfluxo correspondente, mantendo a organização do processo.
-
-
+<article class="solution-page" data-verified="false" data-contact-name="Automatiza-mg">
+  <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+    <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Consulta a situação de veículos</h1><p class="solution-date">Publicada em 12/02/2025 · Atualizada em 09/11/2026</p></div></header>
+    <div class="solution-layout"><main>
+      <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p class="solution-use">Robô desenvolvido para automatizar a consulta de multas veiculares, ideal para gestores de frotas com grande volume de veículos.</p></section>
+      <!-- robot-flow -->
+      <section class="solution-section" aria-labelledby="responsavel"><h2 id="responsavel">Responsável</h2><div class="solution-responsible"><p><span class="solution-contact-label">Nome:</span><span>Automatiza-mg</span></p><p><span class="solution-contact-label">E-mail:</span><a class="solution-contact" href="mailto:automatizamg@planejamento.mg.gov.br">automatizamg@planejamento.mg.gov.br</a></p><p><span class="solution-contact-label">Órgão:</span><span>Seplag</span></p></div></section>
+      <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas"><h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2><div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Power Automate na versão correta</span><span class="solution-tag solution-tag--prerequisite">Chrome como navegador</span><span class="solution-tag solution-tag--prerequisite">Extensão Chrome para Power Automate ativada.</span><span class="solution-tag solution-tag--prerequisite">Conta no site cidadão.mg.gov.br</span><span class="solution-tag solution-tag--system">Cidadão MG</span><span class="solution-tag solution-tag--system">Auto PRF</span><span class="solution-tag solution-tag--system">Portal de Multas de Trânsito (DNIT)</span><span class="solution-tag solution-tag--tool">Power Automate Desktop</span><span class="solution-tag solution-tag--tool">Excel</span></div></div></section>
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">1. Faça login no site cidadao.mg.gov.br.
+2. Clique em anexos para baixar a planilha modelo.
+3. Complete as colunas da planilha modelo com a placa e o chassi dos veículos que serão consultados e salve.
+4. Copie o código do robô - Main (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_main.txt" target="_blank" rel="noopener">link</a>) e cole em um novo fluxo Power Automate Desktop.
+5. Copie o código do robô - DNIT (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_dnit.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+6. Copie o código do robô - cidadao.mg (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_cidadao_mg.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
+7. Copie o código do robô - PRF (<a href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/seplag_consulta_frota/consulta_frota_prf.txt" target="_blank" rel="noopener">link</a>) e cole em um novo subfluxo com esse mesmo nome3 no Power Automate Desktop.
+8. Abra a primeira ação 'Iniciar Excel', edite o campo 'caminho do documento' e selecione o documento salvo no passo anterior.</p></section>
+      <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p class="solution-use">2. Qualquer modificação além do preenchimento da planilha Excel nos moldes em que ela está (por exemplo, a inclusão de mais colunas ou o deslocamento das já existentes) pode exigir modificações no código original do robô. O download desta planilha não é suportado na versão mobile desta página.
+4-7. Na nova aba que será aberta, basta apertar Ctrl+A para selecionar todo código e Ctrl+C para copiar.
+5-7. O robô contém um fluxo principal chamado "Main" e três subfluxos, cada um responsável por consultar um dos sites. Para isso, é necessário criar três novos subfluxos. No canto superior direito da interface, clique em "Subfluxo" &gt; "Novo subfluxo" e crie os seguintes fluxos: "DNIT", "PRF" e "cidadao.mg". Certifique-se de colar cada trecho de código no subfluxo correspondente, mantendo a organização do processo
+0. Versão Power Automate: 2.39.00239.23332</p></section>
+      <section class="solution-help" aria-labelledby="solution-help-title"><h2 id="solution-help-title"><span class="solution-help-icon" aria-hidden="true">?</span>Caso precise de ajuda</h2><div class="solution-help-content"><p>Algum erro está ocorrendo em uma das fases de criação de seu robô? Não tem problema. Acesse <a href="https://automatiza-mg.github.io/automatizacoes/blog/causas-comuns-de-erros-na-montagem-dos-fluxos-dos-rob%C3%B4s/">aqui</a> uma lista com causas de erros ou paradas do robô.</p><p>Para esclarecer dúvidas, recomendamos a participação em nosso Tira-Dúvidas, realizado todas as sextas-feiras, das 15h às 17h. Para participar, <a href="https://bit.ly/48A1Obu">acesse</a>.</p><p>Caso prefira, mande um e-mail para o endereço que está em <a href="#responsavel">“Responsável”</a>, mais acima nesta mesma página. Ele pertence ao criador / à criadora do robô, que poderá auxiliar com eventuais dúvidas.</p><p>Ótimo trabalho!</p></div></section>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: Gestão de Frota</div>
+    </main><aside class="solution-sidebar" aria-label="Informações da solução">
+      <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="./assets/planilha_modelo_multa.csv" download>Baixar anexo: planilha_modelo_multa.csv ↓</a></div></section>
+    </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+  </div>
+</article>
