@@ -8,6 +8,8 @@ hide:
   <header class="robots-catalog__hero">
     <h1 id="robots-catalog-title">Biblioteca de soluções</h1>
     <p>Explore soluções para melhorar processos de trabalho.</p>
+    <p>Aqui estão catalogados robôs produzidos durante treinamentos e projetos desenvolvidos pelo Automatiza.MG ou enviados por outros servidores ao redor do Estado.</p>
+    <p>Os robôs da Biblioteca são de livre utilização, devendo, no entanto, ser observados nossos <a href="termos_uso/">termos de uso</a>.</p>
     <label class="robots-catalog__search" for="robots-catalog-search">
       <span class="robots-catalog__search-icon" aria-hidden="true">⌕</span>
       <input id="robots-catalog-search" type="search" placeholder="Busque por título, descrição, sistema ou palavra-chave" autocomplete="off">
