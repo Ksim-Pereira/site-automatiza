@@ -1,101 +1,24 @@
----
-comments: true
-hide:
-  - navigation
-tags:
-  - SEI
----
 
-# Atribui processos no SEI
-
-
-## Informações gerais
-
-| **Desenvolvedor**| Automatiza-mg  |
-| ----------- | ------------------------------------ |
-| **E-mail**       | automatizamg@planejamento.mg.gov.br|
-| **Ferramenta**    | Power Automate Desktop |
-| **Versão Power Automate**    | 2.58.00134.25188 |
-
-
-- [x] Atribui processos automaticamente conforme critério selecionado.
-- [x] Faz login no SEI, troca de unidade (se necessário) e percorre a fila.
-- [x] Atribui com base no Nome e CPF, percorrendo pela unidade e órgão; registra log de auditoria de atribuição.
-- [x] Pode ser executado em modo de teste (sem atribuir) e modo produção (atribui de fato).
-- [x] Aguarda o carregamento das páginas para garantir que tudo esteja certo.
-- [x] Economiza tempo e evita erros.
-
-??? note "**Clique para ver o fluxo da solução**"
-
-    ```mermaid
-    --8<-- "docs/robos/atribuicao_processo_sei/assets/fluxo.md"
-    ```
-
---8<-- "docs/overrides/partials/modelo_robo/requisitos_montando_seu_proprio_robo.md"
-
-<div class="grid" markdown>
-
-:fontawesome-solid-1: :material-microsoft-excel: <a href="./assets/Fila_de_Atribuicao.xlsx" download="Fila_de_Atribuição.xlsx">__Clique aqui para baixar a planilha-modelo.__</a> [^1]
-{ .card }
-
-:fontawesome-solid-2: [:octicons-copy-16: __Copie o código do robô - Main__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/main.txt)[^2] e cole em um novo fluxo Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-3: [:octicons-copy-16: __Copie o código do robô - `configura_fluxo`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/configura_fluxo.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-4: [:octicons-copy-16: __Copie o código do robô - `carrega_fila_de_atribuicao`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/carrega_fila_de_atribuicao.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-5: [:octicons-copy-16: __Copie o código do robô - `login_sei`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/login_sei.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-6: [:octicons-copy-16: __Copie o código do robô - `troca_unidade`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/troca_unidade_sei.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-7: [:octicons-copy-16: __Copie o código do robô - `extrai_dados`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/extrai_dados.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-8: [:octicons-copy-16: __Copie o código do robô - `distribui_processos`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/distribui_processos.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-9: [:octicons-copy-16: __Copie o código do robô - `atribui_processos`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/atribui_processos.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-0: [:octicons-copy-16: __Copie o código do robô - `salva_dados`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/salva_dados.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-1: [:octicons-copy-16: __Copie o código do robô - `configura_marcadores`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/configura_marcadores.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-2: [:octicons-copy-16: __Copie o código do robô - `distribui_por_fila`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/distribui_por_fila.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-3: [:octicons-copy-16: __Copie o código do robô - `distribui_aleatoriamente`__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/atribuicao_processo_sei/distribui_aleatoriamente.txt)[^2] e cole em um novo subfluxo com esse mesmo nome no Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-4: :material-application-variable: __Crie a variável de entrada__ `login_sei`[^3].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-5: :material-application-variable: __Crie a variável de entrada__ `senha_sei`[^4].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-6: :material-application-variable: __Crie a variável de entrada__ `orgao_sei`[^5].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-7: :material-application-variable: __Crie a variável de entrada__ `unidade_sei`[^5].
-{ .card }
-
-:fontawesome-solid-1::fontawesome-solid-8: :material-application-variable: __Crie a variável de entrada__ `pastaDeTrabalho`[^6].
-{ .card } 
-
-</div>
-
---8<-- "docs/overrides/partials/modelo_robo/ajuda.md"
-
-[^1]: Não mantenha linhas sem conteúdo na planilha. Preencha apenas as linhas necessárias. A inserção de linhas vazias acarretará erros no robô.
-[^2]: Na nova aba que será aberta, basta apertar ++ctrl+a++ para selecionar todo código e ++ctrl+c++ para copiar.
-[^3]: Login para entrar no SEI. Valor cadastrado para a variável deverá conter CPF com exatamente 11 caracteres numéricos. Favor não incluir pontos (.) ou hífen (-).
-[^4]: Senha para login no SEI. Recomendamos incluir esta variável como confidencial.
-[^5]: Órgão de login no SEI. Valor cadastrado para variável deverá ser exatamente igual à existente na lista de órgãos disponíveis na página inicial de login, inclusive com todas as letras maiúsculas.
-[^6]: Local e ou caminho da pasta onde se encontra o arquivo Excel com a fila de atribuição. Exemplo: 'C:\Users\xxxx\Downloads\Atribuição_automatica'
+<article class="solution-page" data-verified="false" data-contact-name="Automatiza-mg">
+  <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+    <header class="solution-top"><div><h1>Busca números de documentos em processo SEI</h1><p class="solution-date">Atualizada em 10/11/2026</p></div></header>
+    <div class="solution-layout"><main>
+      <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p class="solution-use">Robô dedicado a facilitar a busca dos números de documentos em um processo SEI. Lista todos os documentos (e seus respectivos números) de um processo SEI. Aguarda o carregamento das páginas para garantir que tudo esteja certo.</p></section>
+      <section class="solution-section" aria-labelledby="responsavel"><h2 id="responsavel">Responsável</h2><div class="solution-responsible"><p><span class="solution-contact-label">Nome:</span><span>Automatiza-mg</span></p><p><span class="solution-contact-label">E-mail:</span><a class="solution-contact" href="mailto:automatizamg@planejamento.mg.gov.br">automatizamg@planejamento.mg.gov.br</a></p><p><span class="solution-contact-label">Órgão:</span><span>Seplag</span></p></div></section>
+      <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas"><h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2><div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Power Automate na versão correta</span><span class="solution-tag solution-tag--prerequisite">Chrome como navegador</span><span class="solution-tag solution-tag--prerequisite">Extensão Chrome para Power Automate ativada.</span><span class="solution-tag solution-tag--system">SEI</span><span class="solution-tag solution-tag--tool">Power Automate Desktop</span></div></div></section>
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">1. Utilize o robô de login no SEI em um novo subfluxo chamado login_sei (<a href="https://automatiza-mg.github.io/automatizacoes/robos/login_sei/#montando-o-seu-robo" target="_blank" rel="noopener">link</a>).
+2. Utilize o robô de troca de unidade no SEI caso precise (<a href="https://automatiza-mg.github.io/automatizacoes/robos/troca_unidade_sei/" target="_blank" rel="noopener">link</a>).
+3. Copie o código do robô (código fonte) e cole em um novo fluxo Power Automate Desktop.
+4. Crie a variável de entrada numero_processo.</p></section>
+      <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p class="solution-use">1. As variáveis de entrada descritas na página do robo para login no sei também deverão ser criadas.
+3. Na nova aba que será aberta, basta apertar Ctrl+A para selecionar todo código e Ctrl+C para copiar.
+4. Necessário criar repetição (loop) caso seja necessário buscar números de documentos de mais de um processo.</p></section>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: SEI</div>
+    </main><aside class="solution-sidebar" aria-label="Informações da solução">
+      <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/main/robos/site/busca_numeros_documentos_processo_sei.txt" target="_blank" rel="noopener">link</a></div></section>
+    </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+  </div>
+</article>\n
