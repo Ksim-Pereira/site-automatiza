@@ -80,8 +80,8 @@ Cras rhoncus tellus accumsan, elementum dolor sit amet, efficitur sapien. Vivamu
           <p class="solution-label">Repositório e anexos</p>
           <div class="solution-actions">
             <!-- Para exibir um item opcional, adicione seu atributo href. -->
-            <a class="solution-action" data-optional-link href="https://www.google.com">Código-fonte ↗</a>
-            <a class="solution-action" data-optional-link href="https://www.google.com">Baixar anexo ↓</a>
+            <a class="solution-action" data-optional-link href="https://www.google.com">Código-fonte</a>
+            <a class="solution-action" data-optional-link href="https://www.google.com">Baixar Anexos</a>
           </div>
         </section>
       </aside>
