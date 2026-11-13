@@ -28,7 +28,7 @@ Informações para a planilha-modelo
       <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: RH - SISAP</div>
     </main><aside class="solution-sidebar" aria-label="Informações da solução">
       <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
-      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="./assets/inclusao-ferias-premio.csv" download>Baixar Anexos</a></div></section>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/site/scap/ferias_premio/incluir_concess%C3%A3o_ferias_pr%C3%AAmio.txt" target="_blank" rel="noopener">Código-fonte</a><a class="solution-action" href="./assets/inclusao-ferias-premio.csv" download>Baixar Anexos</a></div></section>
     </aside></div>
     <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
   </div>
