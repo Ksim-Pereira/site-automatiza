@@ -116,11 +116,17 @@ markdown_extensions:
 
 extra_css:
   - assets/style.css
+  - assets/solution.css
+  - assets/robots-catalog.css
   - https://unpkg.com/mermaid@10.4.0/dist/mermaid.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 extra_javascript:
   - assets/style.js
+  - assets/solution-contact.js
+  - assets/solution-ids.js
+  - assets/robots-catalog.js
   - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
+  - assets/mermaid.js
   - assets/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
@@ -178,9 +184,13 @@ plugins:
       categories_toc: true
       post_excerpt: required
   - tags:
-      tags_file: robos/index.md
+      tags_file: tags.md
   - mkdocs-video:
       video_muted: True
       video_controls: True
       video_autoplay: False
   - table-reader
+
+hooks:
+  - hooks/catalog_tags.py
+  - hooks/robot_flow.py

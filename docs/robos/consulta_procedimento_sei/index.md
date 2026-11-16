@@ -1,70 +1,29 @@
----
-comments: true
-hide:
-  - navigation
-tags:
-  - APIs
----
+<article class="solution-page" data-verified="false" data-contact-name="Automatiza-MG">
+  <div class="solution-card">
+    <a class="solution-back" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+    <header class="solution-top"><div><p class="solution-status">Solução com segurança verificada pelo Escritório Central de Inovação e Automatização</p><h1>Baixar processos e documentos SEI</h1><p class="solution-date">Publicada em 27/10/2026 · Atualizada em 27/10/2026</p></div></header>
+    <div class="solution-layout"><main>
+      <section class="solution-section" aria-labelledby="descricao"><h2 id="descricao">Descrição da solução</h2><p>Usa API do SEI para realizar downloads de processos SEI em PDF ou de todos os documentos de um processo em uma pasta ZIP.</p></section>
+      <!-- robot-flow -->
+      <section class="solution-section" aria-labelledby="responsavel"><h2 id="responsavel">Responsável</h2><div class="solution-responsible"><p><span class="solution-contact-label">Nome:</span><span>Automatiza-MG</span></p><p><span class="solution-contact-label">E-mail:</span><a class="solution-contact" data-contact-email>Carregando e-mail...</a></p><p data-contact-organization hidden><span class="solution-contact-label">Órgão:</span><span data-contact-organization-name></span></p></div></section>
+      <section class="solution-section" aria-labelledby="requisitos-sistemas-ferramentas"><h2 id="requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</h2><div class="solution-meta-grid"><div class="solution-tags"><span class="solution-tag solution-tag--prerequisite">Power Automate na versão correta</span><span class="solution-tag solution-tag--prerequisite">Token de acesso à API do SEI</span><span class="solution-tag solution-tag--prerequisite">Sistema criado no SEI</span><span class="solution-tag solution-tag--system">SEI!MG</span><span class="solution-tag solution-tag--tool">Power Automate Desktop</span></div></div></section>
+      <section class="solution-section" aria-labelledby="uso"><h2 id="uso">Como usar a solução</h2><p class="solution-use">  
+      1. Copie o código do robô e cole em um novo fluxo Power Automate Desktop.
+      2. Crie a variável de entrada api_sei_sistema.
+      3. Crie a variável de entrada api_sei_token.
+      4. Crie a variável de entrada api_sei_unidade.
 
-# Baixa processos e documentos SEI
-
-
-## Informações gerais
-
-| **Desenvolvedor**| Automatiza-mg  |
-| ----------- | ------------------------------------ |
-| **E-mail**       | automatizamg@planejamento.mg.gov.br|
-| **Ferramenta**    | Power Automate Desktop |
-| **Versão Power Automate**    | 2.39.00239.23332 |
-
-- [x] Robô que realiza chamada em API externa.
-- [x] Verifica se resposta à chamada API foi bem sucedida.
-- [x] Executa downloads de processos SEI em PDF ou de todos os documentos de um processo em uma pasta ZIP.
-
-## Pré-requisitos
-
-<div class="grid" markdown>
-
-:material-play-circle: __Power Automate__ na [versão correta](#informacoes-gerais)
-{ .card }
-
-:octicons-key-16: __Token de acesso__ à API do SEI
-{ .card }
-
-:octicons-key-16: __Sistema__ criado no SEI
-{ .card }
-
-</div>
-
-## Montando o seu robô
-
-Este é um **protótipo de robô**.
-Entenda seu funcionamento e, caso precise, ajuste-o às suas necessidades.
-
-As variáveis [Token de acesso e sistema SEI](https://automatiza-mg.github.io/automatizacoes/blog/criando-sistema-e-token-no-sei-para-utilizar-o-rob%C3%B4-de-api-do-sei/) e [código da unidade SEI](https://automatiza-mg.github.io/automatizacoes/blog/buscando-c%C3%B3digo-da-unidade-no-sei/) possuem um post a parte para serem explicadas. Confira no hiperlink!
-
-Para dar vida a ele:
-
-<div class="grid" markdown>
-
-[:fontawesome-solid-1: :octicons-copy-16: __Copie o código do robô__](https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/api_sei.txt)[^1] e cole em um novo fluxo Power Automate Desktop.
-{ .card }
-
-:fontawesome-solid-2: :material-application-variable: __Crie a variável de entrada__ [`api_sei_sistema`](https://automatiza-mg.github.io/automatizacoes/blog/criando-sistema-e-token-no-sei-para-utilizar-o-rob%C3%B4-de-api-do-sei/)[^2].
-{ .card }
-
-:fontawesome-solid-3: :material-application-variable: __Crie a variável de entrada__ [`api_sei_token`](https://automatiza-mg.github.io/automatizacoes/blog/criando-sistema-e-token-no-sei-para-utilizar-o-rob%C3%B4-de-api-do-sei/)[^3].
-{ .card }
-
-:fontawesome-solid-4: :material-application-variable: __Crie a variável de entrada__ [`api_sei_unidade`](https://automatiza-mg.github.io/automatizacoes/blog/buscando-c%C3%B3digo-da-unidade-no-sei/)[^4].
-{ .card }
-
-</div>
-
---8<-- "docs/overrides/partials/modelo_robo/ajuda.md"
-
-
-[^1]: Na nova aba que será aberta, basta apertar ++ctrl+a++ para selecionar todo código e ++ctrl+c++ para copiar.
-[^2]: Sistema criado pelos Administradores do SEI.
-[^3]: Token de acesso à API do SEI gerada pelos administradores do SEI.
-[^4]: Código da Unidade que será utilizada no SEI para encontrar o(s) processo(s) procurados.
+Links de instrução:
+1. <a href="https://automatiza-mg.github.io/automatizacoes/blog/criando-sistema-e-token-no-sei-para-utilizar-o-rob%C3%B4-de-api-do-sei/" target="_blank" rel="noopener">Criar sistema e token no SEI</a>.
+2. <a href="https://automatiza-mg.github.io/automatizacoes/blog/buscando-c%C3%B3digo-da-unidade-no-sei/" target="_blank" rel="noopener">Buscar código da unidade no SEI</a>.
+3. <a href="https://automatiza-mg.github.io/automatizacoes/blog/causas-comuns-de-erros-na-montagem-dos-fluxos-dos-rob%C3%B4s/" target="_blank" rel="noopener">Causas comuns de erros na montagem de fluxos</a>.</p></section>
+      <section class="solution-section" aria-labelledby="observacoes"><h2 id="observacoes">Observações</h2><p>Versão Power Automate: 2.39.00239.23332</p></section>
+      <section class="solution-help" aria-labelledby="solution-help-title"><h2 id="solution-help-title"><span class="solution-help-icon" aria-hidden="true">?</span>Caso precise de ajuda</h2><div class="solution-help-content"><p>Algum erro está ocorrendo em uma das fases de criação de seu robô? Não tem problema. Acesse <a href="https://automatiza-mg.github.io/automatizacoes/blog/causas-comuns-de-erros-na-montagem-dos-fluxos-dos-rob%C3%B4s/">aqui</a> uma lista com causas de erros ou paradas do robô.</p><p>Para esclarecer dúvidas, recomendamos a participação em nosso Tira-Dúvidas, realizado todas as sextas-feiras, das 15h às 17h. Para participar, <a href="https://bit.ly/48A1Obu">acesse</a>.</p><p>Caso prefira, mande um e-mail para o endereço que está em <a href="#responsavel">“Responsável”</a>, mais acima nesta mesma página. Ele pertence ao criador / à criadora do robô, que poderá auxiliar com eventuais dúvidas.</p><p>Ótimo trabalho!</p></div></section>
+      <div class="solution-keywords" hidden aria-hidden="true">Palavras-chave: API</div>
+    </main><aside class="solution-sidebar" aria-label="Informações da solução">
+      <nav class="solution-index" aria-label="Índice da página"><p class="solution-label">Nesta página</p><ol><li><a href="#descricao">Descrição da solução</a></li><li><a href="#responsavel">Responsável</a></li><li><a href="#requisitos-sistemas-ferramentas">Pré-requisitos, sistemas e ferramentas</a></li><li><a href="#uso">Como usar a solução</a></li><li><a href="#observacoes">Observações</a></li></ol></nav>
+      <section class="solution-info"><p class="solution-label">Repositório e anexos</p><div class="solution-actions"><a class="solution-action" data-optional-link href="https://raw.githubusercontent.com/automatiza-mg/biblioteca-de-robos/refs/heads/main/robos/api_sei.txt" target="_blank" rel="noopener">Código-fonte</a></div></section>
+    </aside></div>
+    <a class="solution-back solution-back--bottom" href="../" aria-label="Voltar para a Biblioteca de soluções">← Voltar para a Biblioteca de soluções</a>
+  </div>
+</article>

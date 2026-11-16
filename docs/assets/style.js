@@ -62,3 +62,26 @@ if (downloadButton) {
     }
   });
 }
+
+// Permite recolher o fluxo do robô clicando em qualquer ponto do diagrama aberto.
+document.addEventListener('click', function(event) {
+  var flow = event.target.closest('details.robot-flow[open]');
+  if (flow && !event.target.closest('summary')) {
+    flow.open = false;
+  }
+});
+
+// Ao recolher um fluxo longo, a página poderia permanecer na posição que
+// correspondia ao fim do diagrama. Volta ao início do painel em qualquer
+// forma de fechamento, inclusive ao clicar novamente no seu título.
+document.addEventListener('toggle', function(event) {
+  var flow = event.target;
+  if (!(flow instanceof HTMLDetailsElement) ||
+      !flow.classList.contains('robot-flow') || flow.open) {
+    return;
+  }
+
+  requestAnimationFrame(function() {
+    flow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}, true);

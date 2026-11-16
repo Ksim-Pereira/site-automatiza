@@ -29,7 +29,7 @@ Imagem 1: Site PBH
 
 ![image](https://github.com/user-attachments/assets/9a8f931e-7eee-4c2d-92e5-a1a343b902f9)
 
-Fonte: https://cnd.pbh.gov.br/CNDOnline/
+Fonte: <a href="https://cnd.pbh.gov.br/CNDOnline/" target="_blank" rel="noopener">link</a>
 
 A página inicial do processo é apresentada na **Imagem 1** acima. O detalhamento do fluxo pode ser descrito a seguir:
 
